@@ -1,0 +1,3305 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Supply Chain Anomaly Detection and Risk Assessment System for Israel">
+      
+      
+        <meta name="author" content="National Emergency Authority & Ministry of Innovation, Science and Technology">
+      
+      
+        <link rel="canonical" href="https://horizon-scanning.github.io/scar-documentation/dashboards/transport_prices.en/">
+      
+      
+        <link rel="prev" href="../commodity_prices.en/">
+      
+      
+        <link rel="next" href="../supply_demand.en/">
+      
+      
+        
+          <link rel="alternate" href="/index.en/" hreflang="en">
+        
+          <link rel="alternate" href="/index.he/" hreflang="he">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Transport Prices - SCAR - Supply Chain Anomaly Recognition System</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#transport-prices-dashboard" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="SCAR - Supply Chain Anomaly Recognition System" class="md-header__button md-logo" aria-label="SCAR - Supply Chain Anomaly Recognition System" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SCAR - Supply Chain Anomaly Recognition System
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Transport Prices
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/index.en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/index.he/" hreflang="he" class="md-select__link">
+              עברית
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../index.en/" class="md-tabs__link">
+          
+  
+  
+  English
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../index.he/" class="md-tabs__link">
+          
+  
+  
+  עברית
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SCAR - Supply Chain Anomaly Recognition System" class="md-nav__button md-logo" aria-label="SCAR - Supply Chain Anomaly Recognition System" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    SCAR - Supply Chain Anomaly Recognition System
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    English
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    English
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Overview
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    System Overview
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/system_overview.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About SCAR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboards
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dashboards
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kpis.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KPIs Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../news.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    News Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commodity_prices.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commodity Prices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transport Prices
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transport Prices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dashboard-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboard Components
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dashboard Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#futures-prices-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Futures Prices Chart
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Futures Prices Chart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#baltic-dry-index-bdi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Baltic Dry Index (BDI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#containerized-freight-index-cfi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Containerized Freight Index (CFI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commodity-transit-type-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commodity Transit Type Table
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indices-forecast-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Indices Forecast Table
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#happening-now-week-over-week-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Happening Now (Week-over-Week) Panel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expert-index-analysis-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Expert Index Analysis Section
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Expert Index Analysis Section">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-baltic-dry-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For Baltic Dry Index:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-containerized-freight-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For Containerized Freight Index:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-the-baltic-dry-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding the Baltic Dry Index
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding the Baltic Dry Index">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#components-of-bdi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Components of BDI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-bdi-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why BDI Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bdi-interpretation-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BDI Interpretation Guide
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-containerized-freight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding Containerized Freight
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding Containerized Freight">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-trade-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Trade Routes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container-shipping-dynamics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Container Shipping Dynamics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-sources-and-update-schedule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Sources and Update Schedule
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Sources and Update Schedule">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trading-economics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trading Economics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reuters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reuters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-transport-prices-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the Transport Prices Dashboard
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the Transport Prices Dashboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#daily-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Daily Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alert-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alert Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-with-other-dashboards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration with Other Dashboards
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integration with Other Dashboards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cross-reference-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cross-Reference Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations-and-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations and Considerations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Limitations and Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#index-vs-contract-rates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Index vs. Contract Rates
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#freight-is-just-one-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Freight is Just One Component
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#market-volatility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Market Volatility
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary-of-shipping-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Glossary of Shipping Terms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transport-price-weights-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transport Price Weights File
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Transport Price Weights File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Purpose
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-location" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Location
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weight-configuration-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weight Configuration Logic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updating-weights" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Updating Weights
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-with-kpis-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration with KPIs Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-dashboards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Dashboards
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../supply_demand.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Supply & Demand
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../worldwide_exports.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Worldwide Exports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../israel_imports.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Israel Imports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Chatbot
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI Chatbot
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chatbot/rag_user_guide.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/glossary.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    עברית
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    עברית
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    דף הבית
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    סקירת המערכת
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    סקירת המערכת
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/system_overview.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    אודות SCAR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    דשבורדים
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    דשבורדים
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kpis.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    מדדי KPI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../news.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ניתוח חדשות
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commodity_prices.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    מחירי סחורות
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transport_prices.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    מחירי הובלה
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../supply_demand.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    היצע וביקוש
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../worldwide_exports.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ייצוא עולמי
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../israel_imports.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    יבוא לישראל
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    צ'אטבוט AI
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    צ'אטבוט AI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chatbot/rag_user_guide.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    מדריך למשתמש
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    עיון
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    עיון
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/glossary.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    מונחון
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dashboard-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboard Components
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dashboard Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#futures-prices-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Futures Prices Chart
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Futures Prices Chart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#baltic-dry-index-bdi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Baltic Dry Index (BDI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#containerized-freight-index-cfi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Containerized Freight Index (CFI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commodity-transit-type-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commodity Transit Type Table
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indices-forecast-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Indices Forecast Table
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#happening-now-week-over-week-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Happening Now (Week-over-Week) Panel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expert-index-analysis-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Expert Index Analysis Section
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Expert Index Analysis Section">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-baltic-dry-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For Baltic Dry Index:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-containerized-freight-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For Containerized Freight Index:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-the-baltic-dry-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding the Baltic Dry Index
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding the Baltic Dry Index">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#components-of-bdi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Components of BDI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-bdi-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why BDI Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bdi-interpretation-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BDI Interpretation Guide
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-containerized-freight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding Containerized Freight
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding Containerized Freight">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-trade-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Trade Routes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container-shipping-dynamics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Container Shipping Dynamics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-sources-and-update-schedule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Sources and Update Schedule
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Sources and Update Schedule">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trading-economics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trading Economics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reuters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reuters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-transport-prices-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the Transport Prices Dashboard
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the Transport Prices Dashboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#daily-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Daily Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alert-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alert Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-with-other-dashboards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration with Other Dashboards
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integration with Other Dashboards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cross-reference-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cross-Reference Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations-and-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations and Considerations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Limitations and Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#index-vs-contract-rates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Index vs. Contract Rates
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#freight-is-just-one-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Freight is Just One Component
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#market-volatility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Market Volatility
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary-of-shipping-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Glossary of Shipping Terms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transport-price-weights-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transport Price Weights File
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Transport Price Weights File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Purpose
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-location" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Location
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weight-configuration-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weight Configuration Logic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updating-weights" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Updating Weights
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-with-kpis-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration with KPIs Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-dashboards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Dashboards
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="transport-prices-dashboard">Transport Prices Dashboard<a class="headerlink" href="#transport-prices-dashboard" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>The <strong>Transport Prices Dashboard</strong> provides valuable insights into transportation cost trends and forecasts, which are crucial for logistics, supply chain management, and strategic planning. This dashboard tracks key freight indices that directly impact the cost of moving commodities globally.</p>
+<div class="admonition info">
+<p class="admonition-title">Dashboard Purpose</p>
+<p>Transportation costs are a critical component of supply chain economics. This dashboard monitors shipping rates across different transport modes to identify cost pressures, capacity constraints, and logistics disruptions that may affect commodity availability and pricing.</p>
+</div>
+<hr />
+<h2 id="dashboard-components">Dashboard Components<a class="headerlink" href="#dashboard-components" title="Permanent link">&para;</a></h2>
+<h3 id="futures-prices-chart">Futures Prices Chart<a class="headerlink" href="#futures-prices-chart" title="Permanent link">&para;</a></h3>
+<p><strong>Chart Type:</strong> Multi-line time-series chart</p>
+<p><strong>Description:</strong> Illustrates historical trends and price fluctuations for key freight indices over time.</p>
+<p><strong>Tracked Indices:</strong></p>
+<h4 id="baltic-dry-index-bdi">Baltic Dry Index (BDI)<a class="headerlink" href="#baltic-dry-index-bdi" title="Permanent link">&para;</a></h4>
+<p><strong>What it measures:</strong> Rates for transporting dry bulk commodities such as coal, grain, iron ore, and other raw materials.</p>
+<p><strong>Importance:</strong> 
+- Leading economic indicator
+- Reflects global trade volumes
+- Sensitive to supply-demand imbalances in shipping capacity</p>
+<p><strong>Typical Range:</strong> 500 - 2,500 points (can spike higher in tight markets)</p>
+<h4 id="containerized-freight-index-cfi">Containerized Freight Index (CFI)<a class="headerlink" href="#containerized-freight-index-cfi" title="Permanent link">&para;</a></h4>
+<p><strong>What it measures:</strong> Cost of shipping goods using container freight on major global trade routes.</p>
+<p><strong>Importance:</strong>
+- Reflects manufactured goods transportation costs
+- Impacts consumer goods pricing
+- Indicates global trade health</p>
+<p><strong>Typical Range:</strong> Varies by route and season</p>
+<p><strong>Features:</strong>
+- <strong>Interactive hover</strong> - View exact index values and dates
+- <strong>Zoom capability</strong> - Focus on specific time periods
+- <strong>Comparison view</strong> - Overlay both indices for relative analysis
+- <strong>Export data</strong> - Download index data for external analysis</p>
+<p><strong>Time Range:</strong> Typically displays 12-24 months of historical data</p>
+<hr />
+<h3 id="commodity-transit-type-table">Commodity Transit Type Table<a class="headerlink" href="#commodity-transit-type-table" title="Permanent link">&para;</a></h3>
+<p><strong>Description:</strong> Indicates which commodities are typically transported using each type of freight (Baltic Dry or Containerized Freight), helping users optimize logistics decisions and understand index relevance.</p>
+<p><strong>Legend:</strong>
+- ✅ <strong>Green check</strong> - Typical transit method for this commodity
+- ❌ <strong>Red cross</strong> - Commodity not commonly shipped via this method
+- ➖ <strong>Yellow line</strong> - In some cases, this is the used transit method</p>
+<p><strong>Example Matrix:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Commodity</th>
+<th>Baltic Dry (Bulk)</th>
+<th>Containerized</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Grains</strong> (Wheat, Corn, Rice)</td>
+<td>✅</td>
+<td>➖</td>
+</tr>
+<tr>
+<td><strong>Coal</strong></td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><strong>Iron Ore</strong></td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><strong>Fertilizers</strong> (Urea)</td>
+<td>✅</td>
+<td>➖</td>
+</tr>
+<tr>
+<td><strong>Crude Oil</strong></td>
+<td>❌ (Tankers)</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><strong>Refined Products</strong></td>
+<td>➖</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><strong>Soybeans, Oilseeds</strong></td>
+<td>✅</td>
+<td>➖</td>
+</tr>
+<tr>
+<td><strong>Sugar</strong></td>
+<td>✅</td>
+<td>➖</td>
+</tr>
+<tr>
+<td><strong>General Cargo</strong></td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<p><strong>How to Use:</strong>
+1. <strong>Identify relevant index</strong> - Determine which freight index affects your commodity
+2. <strong>Weight your analysis</strong> - Commodities with multiple methods require blended assessment
+3. <strong>Route considerations</strong> - Specific trade routes may differ from general patterns
+4. <strong>Contract specifications</strong> - Check actual shipping contracts for precise methods</p>
+<hr />
+<h3 id="indices-forecast-table">Indices Forecast Table<a class="headerlink" href="#indices-forecast-table" title="Permanent link">&para;</a></h3>
+<p><strong>Description:</strong> Presents predicted percentage changes for transportation indices across specified future dates (typically end-of-quarter projections).</p>
+<p><strong>Columns:</strong>
+- <strong>Index</strong> - Freight index name (BDI or CFI)
+- <strong>Current Value</strong> - Latest index reading
+- <strong>Q1 End Forecast</strong> - Projected change by end of Q1
+- <strong>Q2 End Forecast</strong> - Projected change by end of Q2
+- <strong>Q3 End Forecast</strong> - Projected change by end of Q3
+- <strong>Q4 End Forecast</strong> - Projected change by end of Q4</p>
+<p><strong>Arrows Indicators:</strong>
+- ⬆️ <strong>Upward arrow</strong> - Forecasted index increase (higher shipping costs)
+- ⬇️ <strong>Downward arrow</strong> - Forecasted index decrease (lower shipping costs)
+- ➡️ <strong>Horizontal arrow</strong> - Stable/minimal change</p>
+<p><strong>Forecast Methodology:</strong>
+Trading Economics forecasts are built using a proprietary global macro model that takes into account:
+- Analysts' expert expectations for trade volumes
+- Correlations between economic growth and shipping demand
+- Fleet capacity additions and retirements
+- Seasonal patterns in global trade
+- Fuel cost projections
+- Port infrastructure developments</p>
+<p><strong>Interpretation:</strong>
+- <strong>Rising forecasts</strong> - Anticipate higher logistics costs, potential capacity constraints
+- <strong>Declining forecasts</strong> - Expect reduced shipping costs, possibly indicating weak demand
+- <strong>High volatility</strong> - Significant quarter-to-quarter changes suggest market uncertainty</p>
+<div class="admonition note">
+<p class="admonition-title">Forecast Considerations</p>
+<p>Shipping markets are highly volatile and sensitive to sudden events (weather, port strikes, geopolitical disruptions). Forecasts provide direction but should be monitored frequently.</p>
+</div>
+<hr />
+<h3 id="happening-now-week-over-week-panel">Happening Now (Week-over-Week) Panel<a class="headerlink" href="#happening-now-week-over-week-panel" title="Permanent link">&para;</a></h3>
+<p><strong>Description:</strong> Highlights immediate index points change occurring within the current week versus the previous week, identifying notable increases or decreases in shipping costs.</p>
+<p><strong>Calculation:</strong>
+<div class="highlight"><pre><span></span><code>WoW Index Change = (Average Index Points This Week / 
+                    Average Index Points Last Week - 1) × 100
+</code></pre></div></p>
+<p><strong>Display Format:</strong>
+- <strong>Index name</strong> - BDI or CFI
+- <strong>Current value</strong> - Latest index reading
+- <strong>Week-over-week change %</strong> - Percentage change from prior week
+- <strong>Absolute points change</strong> - Actual point movement
+- <strong>Visual indicators</strong> - Color-coded by direction and magnitude</p>
+<p><strong>Interpretation:</strong>
+- <strong>Large increases</strong> (&gt;10%) - Capacity tightening, demand surge, or disruptions
+- <strong>Large decreases</strong> (&gt;10%) - Capacity addition, demand drop, or market normalization
+- <strong>Persistent trends</strong> - Multi-week directional movement indicates structural changes
+- <strong>Divergence between indices</strong> - Different dynamics in bulk vs. container markets</p>
+<p><strong>Update Frequency:</strong> Daily at market close</p>
+<p><strong>Use Cases:</strong>
+- <strong>Immediate cost assessment</strong> - Evaluate impact on current shipments
+- <strong>Negotiation timing</strong> - Adjust contract negotiations based on market direction
+- <strong>Urgency decisions</strong> - Accelerate or delay shipments based on cost trends
+- <strong>Alert triggers</strong> - Identify when to investigate underlying causes</p>
+<hr />
+<h3 id="expert-index-analysis-section">Expert Index Analysis Section<a class="headerlink" href="#expert-index-analysis-section" title="Permanent link">&para;</a></h3>
+<p><strong>Description:</strong> Offers expert-driven summaries and analyses explaining recent price movements and underlying market factors for each freight index. These insights enrich the quantitative data, guiding comprehensive decision-making processes.</p>
+<p><strong>Analysis Components:</strong></p>
+<h4 id="for-baltic-dry-index">For Baltic Dry Index:<a class="headerlink" href="#for-baltic-dry-index" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Recent movements</strong> - Current index trends and levels</li>
+<li><strong>Supply factors</strong> - Fleet capacity, vessel availability, scrapping rates</li>
+<li><strong>Demand factors</strong> - Commodity trade volumes, seasonal patterns</li>
+<li><strong>Route analysis</strong> - Specific trade route performance (e.g., Brazil-China iron ore)</li>
+<li><strong>Market events</strong> - Port congestion, weather disruptions, infrastructure issues</li>
+<li><strong>Outlook</strong> - Short to medium-term expectations</li>
+</ul>
+<h4 id="for-containerized-freight-index">For Containerized Freight Index:<a class="headerlink" href="#for-containerized-freight-index" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Route-specific analysis</strong> - Major lanes (Asia-Europe, Trans-Pacific, etc.)</li>
+<li><strong>Container availability</strong> - Equipment shortages or surpluses</li>
+<li><strong>Port congestion</strong> - Delays at major container ports</li>
+<li><strong>Carrier strategies</strong> - Shipping line capacity management</li>
+<li><strong>Trade imbalances</strong> - Empty container repositioning costs</li>
+<li><strong>Outlook</strong> - Expected cost trends</li>
+</ul>
+<p><strong>How to Use:</strong>
+1. <strong>Read analysis for relevant indices</strong> - Focus on indices affecting your commodities
+2. <strong>Identify driving factors</strong> - Understand whether changes are supply or demand driven
+3. <strong>Assess duration</strong> - Determine if issues are temporary or structural
+4. <strong>Cross-reference with news</strong> - Connect analysis to current events
+5. <strong>Inform logistics strategy</strong> - Adjust shipping plans based on insights</p>
+<hr />
+<h2 id="understanding-the-baltic-dry-index">Understanding the Baltic Dry Index<a class="headerlink" href="#understanding-the-baltic-dry-index" title="Permanent link">&para;</a></h2>
+<h3 id="components-of-bdi">Components of BDI<a class="headerlink" href="#components-of-bdi" title="Permanent link">&para;</a></h3>
+<p>The Baltic Dry Index is actually a composite of several sub-indices:</p>
+<table>
+<thead>
+<tr>
+<th>Sub-Index</th>
+<th>Vessel Type</th>
+<th>Typical Cargo</th>
+<th>Weight in BDI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Capesize</strong></td>
+<td>100,000+ DWT</td>
+<td>Iron ore, coal</td>
+<td>40%</td>
+</tr>
+<tr>
+<td><strong>Panamax</strong></td>
+<td>60,000-80,000 DWT</td>
+<td>Coal, grain</td>
+<td>30%</td>
+</tr>
+<tr>
+<td><strong>Supramax</strong></td>
+<td>50,000-60,000 DWT</td>
+<td>Minor bulk cargo</td>
+<td>30%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>DWT = Deadweight Tonnage</strong> (cargo carrying capacity)</p>
+<h3 id="why-bdi-matters">Why BDI Matters<a class="headerlink" href="#why-bdi-matters" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Economic Indicator</strong> - Leading indicator of global economic activity</li>
+<li><strong>Pure Supply-Demand</strong> - Not influenced by speculation (no futures market for freight)</li>
+<li><strong>Commodity Costs</strong> - Directly impacts delivered cost of bulk commodities</li>
+<li><strong>Supply Chain Health</strong> - Reveals logistics bottlenecks and capacity issues</li>
+</ol>
+<h3 id="bdi-interpretation-guide">BDI Interpretation Guide<a class="headerlink" href="#bdi-interpretation-guide" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>BDI Level</th>
+<th>Market Condition</th>
+<th>Implications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>&lt; 1,000</strong></td>
+<td>Very weak demand</td>
+<td>Oversupply of vessels, low commodity trade</td>
+</tr>
+<tr>
+<td><strong>1,000 - 1,500</strong></td>
+<td>Below average</td>
+<td>Moderate shipping availability</td>
+</tr>
+<tr>
+<td><strong>1,500 - 2,000</strong></td>
+<td>Normal range</td>
+<td>Balanced supply and demand</td>
+</tr>
+<tr>
+<td><strong>2,000 - 3,000</strong></td>
+<td>Strong market</td>
+<td>Tight capacity, high commodity demand</td>
+</tr>
+<tr>
+<td><strong>&gt; 3,000</strong></td>
+<td>Extremely tight</td>
+<td>Severe capacity constraints, potential delays</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="understanding-containerized-freight">Understanding Containerized Freight<a class="headerlink" href="#understanding-containerized-freight" title="Permanent link">&para;</a></h2>
+<h3 id="key-trade-routes">Key Trade Routes<a class="headerlink" href="#key-trade-routes" title="Permanent link">&para;</a></h3>
+<p>The CFI typically tracks major containerized trade lanes:</p>
+<ol>
+<li><strong>Asia-Europe</strong> (Shanghai-Rotterdam)</li>
+<li><strong>Trans-Pacific Eastbound</strong> (Asia-US West Coast)</li>
+<li><strong>Trans-Pacific Westbound</strong> (US-Asia)</li>
+<li><strong>Asia-Middle East/Mediterranean</strong></li>
+<li><strong>Intra-Asia</strong></li>
+</ol>
+<h3 id="container-shipping-dynamics">Container Shipping Dynamics<a class="headerlink" href="#container-shipping-dynamics" title="Permanent link">&para;</a></h3>
+<p><strong>Factors Affecting Rates:</strong>
+- <strong>Peak season</strong> (August-October typically highest)
+- <strong>Chinese New Year</strong> (January-February disruption)
+- <strong>Port congestion</strong> (delays increase costs)
+- <strong>Fuel costs</strong> (bunker fuel surcharges)
+- <strong>Trade imbalances</strong> (empty container repositioning)
+- <strong>Carrier alliances</strong> (shipping line coordination)</p>
+<hr />
+<h2 id="data-sources-and-update-schedule">Data Sources and Update Schedule<a class="headerlink" href="#data-sources-and-update-schedule" title="Permanent link">&para;</a></h2>
+<h3 id="trading-economics">Trading Economics<a class="headerlink" href="#trading-economics" title="Permanent link">&para;</a></h3>
+<p><strong>Coverage:</strong>
+- Baltic Dry Index (daily)
+- Expert forecasts and analysis
+- Historical index data
+- Market commentary</p>
+<p><strong>Update Frequency:</strong> Daily at market close</p>
+<h3 id="reuters">Reuters<a class="headerlink" href="#reuters" title="Permanent link">&para;</a></h3>
+<p><strong>Coverage:</strong>
+- Containerized Freight Index
+- Route-specific rates
+- Port congestion data
+- Shipping industry news</p>
+<p><strong>Update Frequency:</strong> Real-time during market hours</p>
+<hr />
+<h2 id="using-the-transport-prices-dashboard">Using the Transport Prices Dashboard<a class="headerlink" href="#using-the-transport-prices-dashboard" title="Permanent link">&para;</a></h2>
+<h3 id="daily-workflow">Daily Workflow<a class="headerlink" href="#daily-workflow" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>1. Morning Check:
+   - Review &quot;Happening Now&quot; panel for overnight index changes
+   - Note any indices with &gt;10% WoW changes
+   - Check for divergence between BDI and CFI
+
+2. Commodity-Specific Analysis:
+   - Review Transit Type Table for your key commodities
+   - Assess relevant index trends
+   - Cross-check with Commodity Prices for total cost impact
+
+3. Forecast Review (Weekly):
+   - Review quarterly forecasts for logistics planning
+   - Assess if current trends match forecast direction
+   - Update cost projections and procurement timing
+
+4. Deep Dive (As Needed):
+   - Read expert analysis for concerning movements
+   - Check News Dashboard for related disruptions
+   - Contact logistics providers for real-world confirmation
+</code></pre></div>
+<h3 id="alert-configuration">Alert Configuration<a class="headerlink" href="#alert-configuration" title="Permanent link">&para;</a></h3>
+<p>Configure alerts for:
+- ⚠️ BDI or CFI week-over-week changes exceeding ±15%
+- ⚠️ Indices crossing predefined cost thresholds
+- ⚠️ Forecast changes indicating trend reversals
+- ⚠️ Sustained high levels (&gt;3,000 BDI for multiple weeks)
+- ⚠️ Rapid declines indicating demand concerns</p>
+<p>Contact your system administrator to set up custom transport price alerts.</p>
+<hr />
+<h2 id="integration-with-other-dashboards">Integration with Other Dashboards<a class="headerlink" href="#integration-with-other-dashboards" title="Permanent link">&para;</a></h2>
+<h3 id="cross-reference-matrix">Cross-Reference Matrix<a class="headerlink" href="#cross-reference-matrix" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Transport Signal</th>
+<th>Check Dashboard</th>
+<th>Look For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sharp BDI increase</td>
+<td>Commodity Prices</td>
+<td>Grain/coal price impacts</td>
+</tr>
+<tr>
+<td>BDI decline</td>
+<td>Supply &amp; Demand</td>
+<td>Demand reduction indicators</td>
+</tr>
+<tr>
+<td>CFI spike</td>
+<td>Israel Imports</td>
+<td>Container cargo delay risks</td>
+</tr>
+<tr>
+<td>Route-specific issues</td>
+<td>News</td>
+<td>Port disruptions, trade barriers</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Workflow:</strong> Use transport indices to assess logistics risks for commodities tracked in other dashboards.</p>
+<hr />
+<h2 id="limitations-and-considerations">Limitations and Considerations<a class="headerlink" href="#limitations-and-considerations" title="Permanent link">&para;</a></h2>
+<h3 id="index-vs-contract-rates">Index vs. Contract Rates<a class="headerlink" href="#index-vs-contract-rates" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Indices are benchmarks</strong> - Actual contract rates may differ</li>
+<li><strong>Route variations</strong> - Specific trade lanes may not match index movement</li>
+<li><strong>Contract types</strong> - Spot vs. long-term contracts have different dynamics</li>
+</ul>
+<h3 id="freight-is-just-one-component">Freight is Just One Component<a class="headerlink" href="#freight-is-just-one-component" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Total Delivered Cost</strong> includes: commodity price + freight + insurance + port fees + customs</li>
+<li><strong>Currency fluctuations</strong> affect international shipping contracts</li>
+<li><strong>Time value</strong> - Slower shipping (lower cost) may not be optimal</li>
+</ul>
+<h3 id="market-volatility">Market Volatility<a class="headerlink" href="#market-volatility" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>High volatility</strong> in shipping markets</li>
+<li><strong>Event-driven</strong> - Weather, strikes, accidents cause sudden spikes</li>
+<li><strong>Seasonal patterns</strong> - Strong annual cycles in some routes</li>
+</ul>
+<hr />
+<h2 id="glossary-of-shipping-terms">Glossary of Shipping Terms<a class="headerlink" href="#glossary-of-shipping-terms" title="Permanent link">&para;</a></h2>
+<p><strong>DWT (Deadweight Tonnage)</strong> - Maximum cargo weight a vessel can carry</p>
+<p><strong>TEU (Twenty-foot Equivalent Unit)</strong> - Standard container measurement</p>
+<p><strong>Charter Rate</strong> - Cost to hire a vessel for a period</p>
+<p><strong>Spot Market</strong> - Immediate shipping contracts (vs. long-term contracts)</p>
+<p><strong>Ballast</strong> - Vessel traveling empty (no cargo)</p>
+<p><strong>Bunker Fuel</strong> - Heavy fuel oil used by ships</p>
+<p><strong>Demurrage</strong> - Fees for delaying vessel beyond agreed time</p>
+<p><strong>Laytime</strong> - Agreed time for loading/unloading cargo</p>
+<hr />
+<h2 id="transport-price-weights-file">Transport Price Weights File<a class="headerlink" href="#transport-price-weights-file" title="Permanent link">&para;</a></h2>
+<h3 id="overview_1">Overview<a class="headerlink" href="#overview_1" title="Permanent link">&para;</a></h3>
+<p>The <strong>Transport Price Weights</strong> file (<code>transport price weights.xlsx</code>) is a configuration file used by the KPIs Dashboard to calculate the Transport Price Score. This file defines the relative importance (weights) of each shipping index in the weighted average calculation.</p>
+<h3 id="file-purpose">File Purpose<a class="headerlink" href="#file-purpose" title="Permanent link">&para;</a></h3>
+<p>The weights file ensures that the Transport Price Score accurately reflects the relevance of different shipping indices to Israeli strategic commodities. By assigning appropriate weights to Baltic Dry Index (BDI) and Containerized Freight Index (CFI), the system can produce a more accurate risk assessment.</p>
+<h3 id="file-location">File Location<a class="headerlink" href="#file-location" title="Permanent link">&para;</a></h3>
+<p>The <code>transport price weights.xlsx</code> file is located in the project root directory alongside the documentation files.</p>
+<h3 id="file-structure">File Structure<a class="headerlink" href="#file-structure" title="Permanent link">&para;</a></h3>
+<p>The Excel file contains:
+- <strong>Index Weights</strong>: Weight assignments for BDI and CFI indices
+- <strong>Commodity Mapping</strong>: How different commodities relate to each index
+- <strong>Weight Configuration</strong>: Settings that determine how index changes contribute to the final score
+- <strong>Historical Adjustments</strong>: Any changes to weights over time (if tracked)</p>
+<h3 id="how-it-works">How It Works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Index Monitoring</strong>: The system continuously monitors week-over-week changes in BDI and CFI</li>
+<li><strong>Weight Application</strong>: Each index change is multiplied by its corresponding weight from the weights file</li>
+<li><strong>Score Calculation</strong>: The weighted changes are summed: <code>Weighted Momentum % = Σ(Index WoW Change % × Weight)</code></li>
+<li><strong>Risk Assessment</strong>: The resulting score is compared against risk thresholds to determine the color-coded indicator on the KPIs Dashboard</li>
+</ol>
+<h3 id="weight-configuration-logic">Weight Configuration Logic<a class="headerlink" href="#weight-configuration-logic" title="Permanent link">&para;</a></h3>
+<p>Weights are typically assigned based on:</p>
+<ul>
+<li><strong>Transport Method Relevance</strong>: </li>
+<li>Commodities primarily shipped via bulk carriers (e.g., coal, grain, iron ore) → Higher BDI weight</li>
+<li>Commodities primarily shipped via containers (e.g., manufactured goods, refined products) → Higher CFI weight</li>
+<li>
+<p>Commodities using both methods → Balanced weights</p>
+</li>
+<li>
+<p><strong>Israeli Import Patterns</strong>: </p>
+</li>
+<li>Analysis of historical import data to determine which indices better reflect Israeli supply chain costs</li>
+<li>
+<p>Consideration of trade routes and shipping methods commonly used for Israeli imports</p>
+</li>
+<li>
+<p><strong>Strategic Importance</strong>: </p>
+</li>
+<li>Critical commodities may have adjusted weights to ensure their transport cost changes are properly reflected</li>
+<li>Weights may be updated to reflect changes in commodity mix or strategic priorities</li>
+</ul>
+<h3 id="updating-weights">Updating Weights<a class="headerlink" href="#updating-weights" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Administrator Access Required</p>
+<p>Modifying the transport price weights file requires system administrator access. Changes to weights will affect Transport Price Score calculations across all commodities.</p>
+</div>
+<p>To update weights:
+1. Contact your system administrator
+2. Review current shipping patterns and commodity mix
+3. Adjust weights based on strategic priorities or data analysis
+4. Test changes in a development environment before deploying to production
+5. Document weight changes and rationale</p>
+<h3 id="integration-with-kpis-dashboard">Integration with KPIs Dashboard<a class="headerlink" href="#integration-with-kpis-dashboard" title="Permanent link">&para;</a></h3>
+<p>The Transport Price Score displayed on the KPIs Dashboard uses these weights to:
+- Provide a single, unified indicator of transport cost trends
+- Reflect the combined impact of both bulk and containerized shipping costs
+- Enable quick identification of logistics-related supply chain risks</p>
+<p>For more details on how the Transport Price Score is calculated and interpreted, see the <a href="../kpis.en/#3-transport-price-score">KPIs Dashboard documentation</a>.</p>
+<hr />
+<h2 id="related-dashboards">Related Dashboards<a class="headerlink" href="#related-dashboards" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../kpis.en/">KPIs Dashboard</a> - Transport Price Score calculation</li>
+<li><a href="../commodity_prices.en/">Commodity Prices Dashboard</a> - Total delivered cost assessment</li>
+<li><a href="../news.en/">News Dashboard</a> - Transportation disruption events</li>
+<li><a href="../worldwide_exports.en/">Worldwide Exports Dashboard</a> - Trade volume verification</li>
+</ul>
+<hr />
+<p><em>Last Updated: December 2025</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../commodity_prices.en/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Commodity Prices">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Commodity Prices
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../supply_demand.en/" class="md-footer__link md-footer__link--next" aria-label="Next: Supply &amp; Demand">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Supply & Demand
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://www.gov.il" target="_blank" rel="noopener" title="Government of Israel" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M96 0C60.7 0 32 28.7 32 64v384c0 35.3 28.7 64 64 64h201.2c-12.5-14.7-23.2-30.8-31.8-48h-89.5v-80c0-17.7 14.3-32 32-32h32v-26.7c0-18.1 6.1-35.2 16.6-48.8q-.6-2.1-.6-4.5v-32c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v1l86.7-28.9c3.1-1 6.2-1.8 9.3-2.5L416 64c0-35.3-28.7-64-64-64zm32 112c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16zm144-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16v-32c0-8.8 7.2-16 16-16M128 240c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16zm317.3 248.5-13.3 6.3V306.7l96 32v19.6c0 55.8-32.2 106.5-82.7 130.3zm-23.4-229-112 37.3c-13.1 4.4-21.9 16.6-21.9 30.4v31.1c0 74.4 43 142.1 110.2 173.7l18.5 8.7c4.8 2.2 10 3.4 15.2 3.4s10.5-1.2 15.2-3.4l18.5-8.7C533 500.3 576 432.6 576 358.2v-31.1c0-13.8-8.8-26-21.9-30.4l-112-37.3c-6.6-2.2-13.7-2.2-20.2 0z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

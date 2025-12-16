@@ -1,0 +1,2810 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Supply Chain Anomaly Detection and Risk Assessment System for Israel">
+      
+      
+        <meta name="author" content="National Emergency Authority & Ministry of Innovation, Science and Technology">
+      
+      
+        <link rel="canonical" href="https://horizon-scanning.github.io/scar-documentation/dashboards/commodity_prices.he/">
+      
+      
+        <link rel="prev" href="../news.he/">
+      
+      
+        <link rel="next" href="../transport_prices.he/">
+      
+      
+        
+          <link rel="alternate" href="/index.en/" hreflang="en">
+        
+          <link rel="alternate" href="/index.he/" hreflang="he">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>מחירי סחורות - SCAR - Supply Chain Anomaly Recognition System</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="SCAR - Supply Chain Anomaly Recognition System" class="md-header__button md-logo" aria-label="SCAR - Supply Chain Anomaly Recognition System" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SCAR - Supply Chain Anomaly Recognition System
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              מחירי סחורות
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/index.en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/index.he/" hreflang="he" class="md-select__link">
+              עברית
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../index.en/" class="md-tabs__link">
+          
+  
+  
+  English
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../index.he/" class="md-tabs__link">
+          
+  
+  
+  עברית
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SCAR - Supply Chain Anomaly Recognition System" class="md-nav__button md-logo" aria-label="SCAR - Supply Chain Anomaly Recognition System" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    SCAR - Supply Chain Anomaly Recognition System
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    English
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    English
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Overview
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    System Overview
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/system_overview.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About SCAR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboards
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dashboards
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kpis.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KPIs Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../news.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    News Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commodity_prices.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commodity Prices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transport_prices.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transport Prices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../supply_demand.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Supply & Demand
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../worldwide_exports.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Worldwide Exports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../israel_imports.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Israel Imports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Chatbot
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI Chatbot
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chatbot/rag_user_guide.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/glossary.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    עברית
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    עברית
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    דף הבית
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    סקירת המערכת
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    סקירת המערכת
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/system_overview.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    אודות SCAR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    דשבורדים
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    דשבורדים
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kpis.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    מדדי KPI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../news.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ניתוח חדשות
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    מחירי סחורות
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    מחירי סחורות
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        סקירה כללית
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        רכיבי דשבורד
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="רכיבי דשבורד">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        תרשים מחירים עתידיים
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        מידע על קנה מידה של מחירים
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        טבלת תחזית מחירים עתידיים
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        פאנל מתרחש עכשיו (שבוע-על-שבוע)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        חלק ניתוח מומחי מחירים
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        מדד סחורות CRB
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="מדד סחורות CRB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crb_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        מהו מדד CRB?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        הרכב המדד
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crb_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        למה מדד CRB חשוב
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        פרשנות
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        מקורות נתונים ולוח זמנים לעדכון
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="מקורות נתונים ולוח זמנים לעדכון">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trading-economics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trading Economics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        שימוש בדשבורד מחירי סחורות
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="שימוש בדשבורד מחירי סחורות">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        זרימת עבודה יומית
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        תצורת התראות
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        שילוב עם דשבורדים אחרים
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="שילוב עם דשבורדים אחרים">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        מטריצת הפניה צולבת
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        מונחון מונחי מחיר
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        מגבלות ושיקולים
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="מגבלות ושיקולים">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        מחירים עתידיים לעומת פיזיים
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        שיקולי מטבע
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        מפרטי חוזה
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        דשבורדים קשורים
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transport_prices.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    מחירי הובלה
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../supply_demand.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    היצע וביקוש
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../worldwide_exports.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ייצוא עולמי
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../israel_imports.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    יבוא לישראל
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    צ'אטבוט AI
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    צ'אטבוט AI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chatbot/rag_user_guide.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    מדריך למשתמש
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    עיון
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    עיון
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/glossary.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    מונחון
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        סקירה כללית
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        רכיבי דשבורד
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="רכיבי דשבורד">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        תרשים מחירים עתידיים
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        מידע על קנה מידה של מחירים
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        טבלת תחזית מחירים עתידיים
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        פאנל מתרחש עכשיו (שבוע-על-שבוע)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        חלק ניתוח מומחי מחירים
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        מדד סחורות CRB
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="מדד סחורות CRB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crb_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        מהו מדד CRB?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        הרכב המדד
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crb_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        למה מדד CRB חשוב
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        פרשנות
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        מקורות נתונים ולוח זמנים לעדכון
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="מקורות נתונים ולוח זמנים לעדכון">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trading-economics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trading Economics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        שימוש בדשבורד מחירי סחורות
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="שימוש בדשבורד מחירי סחורות">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        זרימת עבודה יומית
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        תצורת התראות
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        שילוב עם דשבורדים אחרים
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="שילוב עם דשבורדים אחרים">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        מטריצת הפניה צולבת
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        מונחון מונחי מחיר
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        מגבלות ושיקולים
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="מגבלות ושיקולים">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        מחירים עתידיים לעומת פיזיים
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        שיקולי מטבע
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        מפרטי חוזה
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        דשבורדים קשורים
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">דשבורד מחירי סחורות<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">סקירה כללית<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><strong>דשבורד מחירי סחורות</strong> מספק תובנות מקיפות למגמות ותחזיות של סחורות מרכזיות ברחבי העולם, ומסייע לבעלי עניין בקבלת החלטות מושכלות לגבי סיכוני ו הזדמנויות שרשרת אספקה.</p>
+<div class="admonition info">
+<p class="admonition-title">מטרת הדשבורד</p>
+<p>דשבורד זה עוקב אחר מחירי שוק עתידיים לסחורות אסטרטגיות, מספק תנועות מחירים בזמן אמת, תחזיות מומחים ופרשנות אנליטית לתמיכה בתכנון מלאי, החלטות רכש והערכת סיכונים.</p>
+</div>
+<hr />
+<h2 id="_3">רכיבי דשבורד<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="_4">תרשים מחירים עתידיים<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p><strong>סוג תרשים:</strong> תרשים סדרות זמן רב-קווי</p>
+<p><strong>תיאור:</strong> מציג מגמות מחירים היסטוריות לאורך זמן עבור סחורות חיוניות. כל סחורה מיוצגת בקו צבע נבדל, המאפשר השוואה וניתוח מגמות קלים.</p>
+<p><strong>טווח זמן:</strong> בדרך כלל מציג 12-24 חודשים של נתונים היסטוריים</p>
+<p><strong>תכונות מרכזיות:</strong>
+- <strong>ריחוף אינטראקטיבי</strong> - הצגת מחירים ותאריכים מדויקים
+- <strong>יכולת זום</strong> - התמקדות בתקופות זמן ספציפיות
+- <strong>החלפת סחורות</strong> - הצגה/הסתרה של סחורות ספציפיות
+- <strong>ייצוא נתונים</strong> - הורדת נתוני מחירים לניתוח</p>
+<hr />
+<h3 id="_5">מידע על קנה מידה של מחירים<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">חשוב: שינוי קנה מידה מחירים</p>
+<p>מחירי חלק מהסחורות שונו בקנה מידה למטרות השוואה ויזואלית. בעת פרשנות ערכים מוחלטים, התייחסו לגורמי קנה המידה להלן:</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>סחורה</th>
+<th>יחידה</th>
+<th>גורם קנה מידה</th>
+<th>חישוב תצוגה</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>שמן חמניות</strong></td>
+<td>INR/10 ק"ג</td>
+<td>÷ 2</td>
+<td>(INR/10 ק"ג) / 2</td>
+</tr>
+<tr>
+<td><strong>סויה</strong></td>
+<td>bushel/ק"ג</td>
+<td>÷ 2.1772</td>
+<td>(bushel/ק"ג) / 2.1772</td>
+</tr>
+<tr>
+<td><strong>לפתית</strong></td>
+<td>EUR/T</td>
+<td>ללא קנה מידה</td>
+<td>EUR/T</td>
+</tr>
+<tr>
+<td><strong>קנולה</strong></td>
+<td>CAD/T</td>
+<td>ללא קנה מידה</td>
+<td>CAD/T</td>
+</tr>
+<tr>
+<td><strong>חיטה</strong></td>
+<td>bushel/ק"ג</td>
+<td>ללא קנה מידה</td>
+<td>bushel/ק"ג</td>
+</tr>
+<tr>
+<td><strong>אורז</strong></td>
+<td>USD/cwt</td>
+<td>× 10</td>
+<td>(USD/cwt) × 10</td>
+</tr>
+<tr>
+<td><strong>סוכר</strong></td>
+<td>SB1:COM</td>
+<td>× 10</td>
+<td>(SB1:COM) × 10</td>
+</tr>
+<tr>
+<td><strong>שיבולת שועל</strong></td>
+<td>O 1:COM</td>
+<td>× 1</td>
+<td>O 1:COM</td>
+</tr>
+<tr>
+<td><strong>שעורה</strong></td>
+<td>INR/T</td>
+<td>÷ 10</td>
+<td>(INR/T) / 10</td>
+</tr>
+<tr>
+<td><strong>תירס</strong></td>
+<td>bushel/ק"ג</td>
+<td>ללא קנה מידה</td>
+<td>bushel/ק"ג</td>
+</tr>
+<tr>
+<td><strong>מדד סחורות CRB</strong></td>
+<td>נקודות מדד</td>
+<td>ללא קנה מידה</td>
+<td>נקודות מדד</td>
+</tr>
+<tr>
+<td><strong>נפט גולמי</strong></td>
+<td>USD/Bbl</td>
+<td>× 2</td>
+<td>(USD/Bbl) × 2</td>
+</tr>
+<tr>
+<td><strong>ברנט גולמי</strong></td>
+<td>USD/Bbl</td>
+<td>× 2</td>
+<td>(USD/Bbl) × 2</td>
+</tr>
+<tr>
+<td><strong>בנזין</strong></td>
+<td>USD/Gal</td>
+<td>× 50</td>
+<td>(USD/Gal) × 50</td>
+</tr>
+<tr>
+<td><strong>פרופאן</strong></td>
+<td>USD/Gal</td>
+<td>× 100</td>
+<td>(USD/Gal) × 100</td>
+</tr>
+<tr>
+<td><strong>דלק סילוני</strong></td>
+<td>USD/Gal</td>
+<td>× 100</td>
+<td>מתואם עם שני מדדים × 100</td>
+</tr>
+<tr>
+<td><strong>דיזל</strong></td>
+<td>משולב</td>
+<td>לא רלוונטי</td>
+<td>שילוב של שני מדדים</td>
+</tr>
+</tbody>
+</table>
+<p><strong>הערות מיוחדות:</strong>
+- <strong>דלק סילוני</strong>: מחירים למשיכת מפרץ ארה"ב לגלון
+- <strong>דיזל</strong>: שילוב של "US Diesel Sales Price" ו-"Euro Area Harmonised Index of Consumer Prices: Diesel", מתעדכן שבועי</p>
+<hr />
+<h3 id="_6">טבלת תחזית מחירים עתידיים<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p><strong>תיאור:</strong> מספקת שינויי אחוזים חזויים לסחורות על פני 4 תאריכי סוף רבעון הבאים, מאפשרת תכנון פרואקטיבי וניהול סיכונים.</p>
+<p><strong>עמודות:</strong>
+- <strong>סחורה</strong> - שם הסחורה
+- <strong>מחיר נוכחי</strong> - מחיר עתידי אחרון זמין
+- <strong>תחזית סוף רבעון 1</strong> - שינוי מחיר חזוי עד סוף רבעון 1
+- <strong>תחזית סוף רבעון 2</strong> - שינוי מחיר חזוי עד סוף רבעון 2
+- <strong>תחזית סוף רבעון 3</strong> - שינוי מחיר חזוי עד סוף רבעון 3
+- <strong>תחזית סוף רבעון 4</strong> - שינוי מחיר חזוי עד סוף רבעון 4</p>
+<p><strong>אינדיקטורים של חצים:</strong>
+- ⬆️ <strong>חץ כלפי מעלה</strong> - עלייה חזויה במחיר
+- ⬇️ <strong>חץ כלפי מטה</strong> - ירידה חזויה במחיר
+- ➡️ <strong>חץ אופקי</strong> - יציב/שינוי מינימלי</p>
+<p><strong>מתודולוגיית תחזית:</strong>
+תחזיות Trading Economics בנויות באמצעות מודל מאקרו עולמי קנייני שלוקח בחשבון:
+- ציפיות מומחים של אנליסטים
+- קורלציות בין מדינות ושווקים
+- קשרים לוגיים בין אינדיקטורים כלכליים שונים
+- דפוסים היסטוריים וגורמים עונתיים
+- יסודות היצע וביקוש</p>
+<p><strong>כיצד להשתמש:</strong>
+1. <strong>זהו מגמות</strong> - חפשו דפוסי עלייה/ירידה עקביים על פני רבעונים
+2. <strong>תכננו רכש</strong> - תזמנו רכישות בהתבסס על תנועות מחירים צפויות
+3. <strong>העריכו סיכון</strong> - שינויים חזויים גדולים מעידים על אי-ודאות גבוהה יותר
+4. <strong>השוו סחורות</strong> - זהו מנצחים ומפסידים יחסיים</p>
+<div class="admonition note">
+<p class="admonition-title">מגבלות תחזית</p>
+<p>תחזיות הן מודלים חיזויים המבוססים על מידע והנחות נוכחיות. מחירים בפועל עשויים להשתנות עקב אירועים בלתי צפויים, שינויי מדיניות או זעזועי שוק.</p>
+</div>
+<hr />
+<h3 id="-">פאנל מתרחש עכשיו (שבוע-על-שבוע)<a class="headerlink" href="#-" title="Permanent link">&para;</a></h3>
+<p><strong>תיאור:</strong> מדגיש שינויי מחירים מיידיים המתרחשים בשבוע הנוכחי לעומת השבוע הקודם, מצביע על סחורות עם עליות או ירידות בולטות.</p>
+<p><strong>חישוב:</strong>
+<div class="highlight"><pre><span></span><code>שינוי מחיר שבוע-על-שבוע % = (ממוצע מחיר השבוע / ממוצע מחיר שבוע שעבר - 1) × 100
+</code></pre></div></p>
+<p><strong>פורמט תצוגה:</strong>
+- <strong>מרוויחים מובילים</strong> - סחורות עם עליות המחירים הגדולות ביותר שבוע-על-שבוע
+- <strong>מפסידים מובילים</strong> - סחורות עם הירידות הגדולות ביותר במחירים שבוע-על-שבוע
+- <strong>שינוי באחוזים</strong> - גודל התנועה
+- <strong>אינדיקטורים ויזואליים</strong> - מקודד בצבעים לפי גודל</p>
+<p><strong>פרשנות:</strong>
+- <strong>עליות גדולות</strong> (&gt;5%) - חששות היצע פוטנציאליים או זינוק ביקוש
+- <strong>ירידות גדולות</strong> (&gt;5%) - היצע יתר פוטנציאלי או הפחתת ביקוש
+- <strong>תנודתיות</strong> - שינויים מהירים מעידים על אי-ודאות בשוק
+- <strong>אישור מגמה</strong> - השוו למגמות ארוכות טווח להקשר</p>
+<p><strong>תדירות עדכון:</strong> יומי בסגירת השוק</p>
+<hr />
+<h3 id="_7">חלק ניתוח מומחי מחירים<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p><strong>תיאור:</strong> ניתוח מומחים על ידי אנליסטים של Trading Economics מספק פרשנות ותובנות מפורטות לכל סחורה, דן בסיבות בסיסיות לתנודות מחירים אחרונות והקשר היסטורי. הערכה איכותית זו משלימה את הנתונים הכמותיים, ומאפשרת הבנה עמוקה יותר וקבלת החלטות מושכלת יותר.</p>
+<p><strong>רכיבי ניתוח:</strong>
+- <strong>תנועות אחרונות</strong> - הסבר למגמות מחירים נוכחיות
+- <strong>גורמים מניעים</strong> - יסודות היצע/ביקוש, מזג אוויר, שינויי מדיניות
+- <strong>סנטימנט שוק</strong> - פרספקטיבות סוחרים ואנליסטים
+- <strong>הקשר היסטורי</strong> - השוואה לדפוסים עבר
+- <strong>תחזית</strong> - ציפיות לטווח קצר עד בינוני
+- <strong>גורמי סיכון</strong> - שיבושים או אי-ודאויות פוטנציאליות</p>
+<p><strong>כיצד להשתמש:</strong>
+1. <strong>קראו ניתוח לסחורות המרכזיות שלכם</strong> - התמקדו בפריטים אסטרטגיים
+2. <strong>הצלבת הפניות עם תרשימי מחירים</strong> - אמתו ניתוח מול נתונים
+3. <strong>שימו לב לגורמי סיכון</strong> - זהו בעיות עתידיות פוטנציאליות
+4. <strong>תעדו תובנות</strong> - שמרו נקודות מרכזיות לתדריכים
+5. <strong>שלבו עם חדשות</strong> - חברו ניתוח לאירועים אחרונים</p>
+<hr />
+<h2 id="crb">מדד סחורות CRB<a class="headerlink" href="#crb" title="Permanent link">&para;</a></h2>
+<h3 id="crb_1">מהו מדד CRB?<a class="headerlink" href="#crb_1" title="Permanent link">&para;</a></h3>
+<p><strong>מדד CRB</strong> (Commodity Research Bureau Index) הוא מדד רחב לביצועי שוק סחורות, מחושב באמצעות ממוצע אריתמטי של מחירי חוזים עתידיים של סחורות עם איזון מחדש חודשי.</p>
+<h3 id="_8">הרכב המדד<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>המדד מורכב מ-<strong>19 סחורות</strong> הממוינות ל-4 קבוצות עם משקלות שונות:</p>
+<table>
+<thead>
+<tr>
+<th>סקטור</th>
+<th>משקל</th>
+<th>סחורות כלולות</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>אנרגיה</strong></td>
+<td>39%</td>
+<td>נפט גולמי, נפט חימום, גז טבעי, בנזין RBOB</td>
+</tr>
+<tr>
+<td><strong>חקלאות</strong></td>
+<td>41%</td>
+<td>תירס, סויה, חיטה, כותנה, סוכר, מיץ תפוזים, קפה, קקאו, בקר חי, חזירים רזים</td>
+</tr>
+<tr>
+<td><strong>מתכות יקרות</strong></td>
+<td>7%</td>
+<td>זהב, כסף</td>
+</tr>
+<tr>
+<td><strong>מתכות בסיס/תעשייתיות</strong></td>
+<td>13%</td>
+<td>אלומיניום, נחושת, ניקל</td>
+</tr>
+</tbody>
+</table>
+<h3 id="crb_2">למה מדד CRB חשוב<a class="headerlink" href="#crb_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>אינדיקטור שוק רחב</strong> - משקף בריאות שוק סחורות כוללת</li>
+<li><strong>אות אינפלציה</strong> - CRB עולה מצביע על לחצים אינפלציוניים</li>
+<li><strong>פעילות כלכלית</strong> - מתאם לצמיחה כלכלית עולמית</li>
+<li><strong>בנצ'מרק גיוון</strong> - משווה סחורות בודדות לשוק</li>
+</ul>
+<h3 id="_9">פרשנות<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>CRB עולה</strong> - עליות מחירי סחורות כלליות, לחצי שרשרת אספקה פוטנציאליים</li>
+<li><strong>CRB יורד</strong> - חולשת מחירי סחורות, חששות ביקוש אפשריים</li>
+<li><strong>סטייה</strong> - כאשר סחורות ספציפיות נעות בניגוד ל-CRB, מעיד על גורמים ייחודיים</li>
+</ul>
+<hr />
+<h2 id="_10">מקורות נתונים ולוח זמנים לעדכון<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<h3 id="trading-economics">Trading Economics<a class="headerlink" href="#trading-economics" title="Permanent link">&para;</a></h3>
+<p><strong>כיסוי:</strong>
+- מחירים עתידיים לכל הסחורות במעקב
+- תחזיות וניתוחי מומחים
+- שינויי מחירים שבוע-על-שבוע
+- פרשנות שוק</p>
+<p><strong>תדירות עדכון:</strong> יומי בסגירת השוק</p>
+<p><strong>איכות נתונים:</strong> ישירות מבורסות סחורות מרכזיות (CME, ICE, NYMEX, וכו')</p>
+<hr />
+<h2 id="_11">שימוש בדשבורד מחירי סחורות<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<h3 id="_12">זרימת עבודה יומית<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>1. סקירת בוקר:
+   - בדקו פאנל &quot;מתרחש עכשיו&quot; לתנועות לילה
+   - שימו לב לכל סחורות עם שינויים של &gt;5% שבוע-על-שבוע
+   - סקרו מגמת מדד CRB
+
+2. ניתוח מפורט:
+   - לסחורות מסומנות, סקרו תרשימי מחירים
+   - קראו ניתוח מומחים להקשר
+   - בדקו דשבורד חדשות לאירועים קשורים
+
+3. סקירת תחזית (שבועי):
+   - סקרו תחזיות רבעוניות לסחורות אסטרטגיות
+   - השוו מגמות תחזית לתנועות נוכחיות
+   - עדכנו תכניות רכש אם התחזיות השתנו
+
+4. תיעוד:
+   - שימו לב לתנועות מחירים משמעותיות
+   - תעדו נקודות מרכזיות של ניתוח מומחים
+   - התריעו לבעלי עניין על שינויים קריטיים
+</code></pre></div>
+<h3 id="_13">תצורת התראות<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p>הגדירו התראות עבור:
+- ⚠️ שינויי מחירים שבוע-על-שבוע העולים על ±10%
+- ⚠️ מחירים חוצים ספים מוגדרים מראש (גבוה/נמוך)
+- ⚠️ שינויי תחזית המעידים על היפוכי מגמה
+- ⚠️ תנועות מדד CRB העולות על ±5% שבועי
+- ⚠️ סחורות ספציפיות נכנסות לתנודתיות קיצונית</p>
+<p>צרו קשר עם מנהל המערכת שלכם כדי להגדיר התראות מחירים מותאמות אישית.</p>
+<hr />
+<h2 id="_14">שילוב עם דשבורדים אחרים<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<h3 id="_15">מטריצת הפניה צולבת<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>איתות מחיר</th>
+<th>בדקו דשבורד</th>
+<th>חפשו</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>עליית מחיר חדה</td>
+<td>חדשות</td>
+<td>שיבוש היצע, חדשות ירידת ייצור</td>
+</tr>
+<tr>
+<td>ירידת מחיר</td>
+<td>היצע וביקוש</td>
+<td>עלייה בהיצע או ירידה בביקוש</td>
+</tr>
+<tr>
+<td>תנודתיות גבוהה</td>
+<td>מחירי הובלה</td>
+<td>השפעות עלויות שילוח</td>
+</tr>
+<tr>
+<td>שינוי תחזית</td>
+<td>ייצוא עולמי</td>
+<td>שינויים בזרימת סחר</td>
+</tr>
+</tbody>
+</table>
+<p><strong>זרימת עבודה:</strong> השתמשו בתנועות מחירים כטריגרים לחקור סיבות בסיסיות בדשבורדים אחרים.</p>
+<hr />
+<h2 id="_16">מונחון מונחי מחיר<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h2>
+<p><strong>מחיר עתידי</strong> - מחיר חוזה למשלוח סחורה בתאריך עתידי מוגדר</p>
+<p><strong>שבוע-על-שבוע</strong> - השוואה של שבוע נוכחי לשבוע קודם</p>
+<p><strong>מחיר ספוט</strong> - מחיר שוק נוכחי למשלוח מיידי (לא מוצג בדשבורד זה)</p>
+<p><strong>קונטנגו</strong> - כאשר מחירים עתידיים גבוהים ממחירים נוכחיים (נורמלי לסחורות ניתנות לאחסון)</p>
+<p><strong>Backwardation</strong> - כאשר מחירים עתידיים נמוכים ממחירים נוכחיים (מעיד על היצע דחוק)</p>
+<p><strong>תנודתיות</strong> - מדד לעוצמת תנודות מחירים</p>
+<p><strong>בסיס</strong> - הפרש בין מחיר ספוט למחיר עתידי</p>
+<hr />
+<h2 id="_17">מגבלות ושיקולים<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h2>
+<h3 id="_18">מחירים עתידיים לעומת פיזיים<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>מחירים עתידיים</strong> מייצגים ציפיות, לא מחירי עסקה בפועל</li>
+<li><strong>שוק פיזי</strong> עשוי להיות שונה משווקים עתידיים</li>
+<li><strong>מיקומי משלוח</strong> משתנים לפי מפרטי חוזה</li>
+</ul>
+<h3 id="_19">שיקולי מטבע<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<ul>
+<li>מחירים מוצגים במטבעות חוזה מקוריים</li>
+<li>תנודות שער חליפין משפיעות על כוח קנייה</li>
+<li>המרות שקל ישראלי לא מוצגות (חשבו בנפרד)</li>
+</ul>
+<h3 id="_20">מפרטי חוזה<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<ul>
+<li>חוזים שונים בעלי חודשי משלוח שונים</li>
+<li>מפרטי איכות משתנים לפי חוזה</li>
+<li>עלויות תחבורה ואחסון לא כלולות</li>
+</ul>
+<hr />
+<h2 id="_21">דשבורדים קשורים<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../kpis.he/">דשבורד KPIs</a> - חישוב ציון מחיר סחורות</li>
+<li><a href="../news.he/">דשבורד חדשות</a> - אירועים מניעי תנועות מחירים</li>
+<li><a href="../supply_demand.he/">דשבורד היצע וביקוש</a> - ניתוח יסודות היצע/ביקוש</li>
+<li><a href="../transport_prices.he/">דשבורד מחירי הובלה</a> - השפעות עלויות שילוח</li>
+</ul>
+<hr />
+<p><em>עודכן לאחרונה: דצמבר 2025</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../news.he/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ניתוח חדשות">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                ניתוח חדשות
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../transport_prices.he/" class="md-footer__link md-footer__link--next" aria-label="Next: מחירי הובלה">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                מחירי הובלה
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://www.gov.il" target="_blank" rel="noopener" title="Government of Israel" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M96 0C60.7 0 32 28.7 32 64v384c0 35.3 28.7 64 64 64h201.2c-12.5-14.7-23.2-30.8-31.8-48h-89.5v-80c0-17.7 14.3-32 32-32h32v-26.7c0-18.1 6.1-35.2 16.6-48.8q-.6-2.1-.6-4.5v-32c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v1l86.7-28.9c3.1-1 6.2-1.8 9.3-2.5L416 64c0-35.3-28.7-64-64-64zm32 112c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16zm144-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16v-32c0-8.8 7.2-16 16-16M128 240c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16zm317.3 248.5-13.3 6.3V306.7l96 32v19.6c0 55.8-32.2 106.5-82.7 130.3zm-23.4-229-112 37.3c-13.1 4.4-21.9 16.6-21.9 30.4v31.1c0 74.4 43 142.1 110.2 173.7l18.5 8.7c4.8 2.2 10 3.4 15.2 3.4s10.5-1.2 15.2-3.4l18.5-8.7C533 500.3 576 432.6 576 358.2v-31.1c0-13.8-8.8-26-21.9-30.4l-112-37.3c-6.6-2.2-13.7-2.2-20.2 0z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

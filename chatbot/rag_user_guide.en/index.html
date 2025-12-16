@@ -1,0 +1,3178 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Supply Chain Anomaly Detection and Risk Assessment System for Israel">
+      
+      
+        <meta name="author" content="National Emergency Authority & Ministry of Innovation, Science and Technology">
+      
+      
+        <link rel="canonical" href="https://horizon-scanning.github.io/scar-documentation/chatbot/rag_user_guide.en/">
+      
+      
+        <link rel="prev" href="../../dashboards/israel_imports.en/">
+      
+      
+        <link rel="next" href="../../glossary/glossary.en/">
+      
+      
+        
+          <link rel="alternate" href="/index.en/" hreflang="en">
+        
+          <link rel="alternate" href="/index.he/" hreflang="he">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>User Guide - SCAR - Supply Chain Anomaly Recognition System</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ai-chatbot-user-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="SCAR - Supply Chain Anomaly Recognition System" class="md-header__button md-logo" aria-label="SCAR - Supply Chain Anomaly Recognition System" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SCAR - Supply Chain Anomaly Recognition System
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              User Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/index.en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/index.he/" hreflang="he" class="md-select__link">
+              עברית
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../index.en/" class="md-tabs__link">
+          
+  
+  
+  English
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../index.he/" class="md-tabs__link">
+          
+  
+  
+  עברית
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SCAR - Supply Chain Anomaly Recognition System" class="md-nav__button md-logo" aria-label="SCAR - Supply Chain Anomaly Recognition System" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    SCAR - Supply Chain Anomaly Recognition System
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    English
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    English
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Overview
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    System Overview
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/system_overview.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About SCAR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboards
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dashboards
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboards/kpis.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KPIs Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboards/news.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    News Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboards/commodity_prices.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commodity Prices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboards/transport_prices.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transport Prices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboards/supply_demand.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Supply & Demand
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboards/worldwide_exports.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Worldwide Exports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboards/israel_imports.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Israel Imports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Chatbot
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI Chatbot
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-the-scar-chatbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is the SCAR Chatbot?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-natural-language-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Natural Language Queries
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-multi-source-data-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Multi-Source Data Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-contextual-understanding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Contextual Understanding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-data-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Data Visualization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-export-and-sharing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Export and Sharing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-the-chatbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Use the Chatbot
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to Use the Chatbot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accessing-the-chatbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing the Chatbot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asking-effective-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Asking Effective Questions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Asking Effective Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#question-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-multi-step-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Multi-Step Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-threshold-alerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Threshold Alerts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-report-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Report Generation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-data-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Data Exploration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-chatbot-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding Chatbot Responses
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding Chatbot Responses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#response-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confidence-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Confidence Indicators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-quality-warnings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Quality Warnings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-and-tricks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips and Tricks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tips and Tricks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-better-answers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting Better Answers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversation-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conversation Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations-and-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations and Considerations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Limitations and Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-the-chatbot-can-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the Chatbot Can Do
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-the-chatbot-cannot-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the Chatbot Cannot Do
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Limitations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Limitations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frequently-asked-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frequently Asked Questions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Frequently Asked Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q-can-the-chatbot-answer-questions-in-hebrew" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: Can the chatbot answer questions in Hebrew?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-how-current-is-the-chatbots-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: How current is the chatbot's data?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-can-i-save-my-conversations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: Can I save my conversations?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-is-my-conversation-private" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: Is my conversation private?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-what-if-the-chatbot-gives-an-incorrect-answer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: What if the chatbot gives an incorrect answer?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-can-the-chatbot-create-custom-dashboards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: Can the chatbot create custom dashboards?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-how-do-i-provide-feedback-on-the-chatbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: How do I provide feedback on the chatbot?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support-and-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Support and Training
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Support and Training">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting Help
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Training Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Future Enhancements
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/glossary.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    עברית
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    עברית
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    דף הבית
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    סקירת המערכת
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    סקירת המערכת
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/system_overview.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    אודות SCAR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    דשבורדים
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    דשבורדים
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboards/kpis.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    מדדי KPI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboards/news.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ניתוח חדשות
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboards/commodity_prices.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    מחירי סחורות
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboards/transport_prices.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    מחירי הובלה
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboards/supply_demand.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    היצע וביקוש
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboards/worldwide_exports.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ייצוא עולמי
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboards/israel_imports.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    יבוא לישראל
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    צ'אטבוט AI
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    צ'אטבוט AI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rag_user_guide.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    מדריך למשתמש
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    עיון
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    עיון
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/glossary.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    מונחון
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-the-scar-chatbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is the SCAR Chatbot?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-natural-language-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Natural Language Queries
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-multi-source-data-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Multi-Source Data Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-contextual-understanding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Contextual Understanding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-data-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Data Visualization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-export-and-sharing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Export and Sharing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-the-chatbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Use the Chatbot
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to Use the Chatbot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accessing-the-chatbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing the Chatbot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asking-effective-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Asking Effective Questions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Asking Effective Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#question-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-multi-step-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Multi-Step Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-threshold-alerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Threshold Alerts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-report-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Report Generation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-data-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Data Exploration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-chatbot-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding Chatbot Responses
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding Chatbot Responses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#response-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confidence-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Confidence Indicators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-quality-warnings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Quality Warnings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-and-tricks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips and Tricks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tips and Tricks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-better-answers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting Better Answers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversation-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conversation Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations-and-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations and Considerations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Limitations and Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-the-chatbot-can-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the Chatbot Can Do
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-the-chatbot-cannot-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the Chatbot Cannot Do
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Limitations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Limitations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frequently-asked-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frequently Asked Questions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Frequently Asked Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q-can-the-chatbot-answer-questions-in-hebrew" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: Can the chatbot answer questions in Hebrew?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-how-current-is-the-chatbots-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: How current is the chatbot's data?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-can-i-save-my-conversations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: Can I save my conversations?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-is-my-conversation-private" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: Is my conversation private?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-what-if-the-chatbot-gives-an-incorrect-answer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: What if the chatbot gives an incorrect answer?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-can-the-chatbot-create-custom-dashboards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: Can the chatbot create custom dashboards?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-how-do-i-provide-feedback-on-the-chatbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: How do I provide feedback on the chatbot?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support-and-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Support and Training
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Support and Training">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting Help
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Training Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Future Enhancements
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ai-chatbot-user-guide">AI Chatbot User Guide<a class="headerlink" href="#ai-chatbot-user-guide" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>The SCAR system includes an <strong>AI-powered chatbot</strong> connected to all system data sources, enabling natural language queries and intelligent analysis of supply chain information. The chatbot uses RAG (Retrieval-Augmented Generation) technology to provide accurate, context-aware responses based on the latest data.</p>
+<div class="admonition info">
+<p class="admonition-title">Coming Soon</p>
+<p>The AI Chatbot feature is currently <strong>in development</strong> and will be available in a future release. This guide describes the planned functionality.</p>
+</div>
+<hr />
+<h2 id="what-is-the-scar-chatbot">What is the SCAR Chatbot?<a class="headerlink" href="#what-is-the-scar-chatbot" title="Permanent link">&para;</a></h2>
+<p>The SCAR Chatbot is an intelligent conversational interface that allows users to:</p>
+<ul>
+<li><strong>Ask questions in natural language</strong> - No need to learn complex queries or dashboard navigation</li>
+<li><strong>Get instant answers</strong> - Rapid responses to data questions without manual dashboard searching</li>
+<li><strong>Analyze trends</strong> - Request analysis of patterns across multiple data dimensions</li>
+<li><strong>Generate insights</strong> - AI-powered interpretation of data relationships</li>
+<li><strong>Create custom reports</strong> - Export answers and analysis for stakeholder briefings</li>
+</ul>
+<hr />
+<h2 id="key-features">Key Features<a class="headerlink" href="#key-features" title="Permanent link">&para;</a></h2>
+<h3 id="1-natural-language-queries">1. Natural Language Queries<a class="headerlink" href="#1-natural-language-queries" title="Permanent link">&para;</a></h3>
+<p>Ask questions in plain English (or Hebrew) just as you would ask a colleague:</p>
+<p><strong>Example Questions:</strong>
+- "What commodities showed price increases last week?"
+- "Which countries reduced wheat exports to Israel in the past quarter?"
+- "Show me transport cost trends for container shipping"
+- "Are there any supply disruptions for crude oil?"
+- "What is the current sentiment for sugar in the news?"</p>
+<h3 id="2-multi-source-data-integration">2. Multi-Source Data Integration<a class="headerlink" href="#2-multi-source-data-integration" title="Permanent link">&para;</a></h3>
+<p>The chatbot has access to all SCAR data sources:</p>
+<ul>
+<li>✅ Commodity prices (futures, spot, forecasts)</li>
+<li>✅ News articles and sentiment analysis</li>
+<li>✅ Transport indices and freight rates</li>
+<li>✅ Supply and demand statistics</li>
+<li>✅ Global export data</li>
+<li>✅ Israeli import data</li>
+<li>✅ Expert analysis and outlooks</li>
+<li>✅ Historical trends and patterns</li>
+</ul>
+<h3 id="3-contextual-understanding">3. Contextual Understanding<a class="headerlink" href="#3-contextual-understanding" title="Permanent link">&para;</a></h3>
+<p>The chatbot maintains conversation context, allowing follow-up questions:</p>
+<p><strong>Example Conversation:</strong>
+<div class="highlight"><pre><span></span><code>User: &quot;Show me wheat imports to Israel last month&quot;
+Bot: [Provides data on wheat imports]
+
+User: &quot;Which country was the top supplier?&quot;
+Bot: [Identifies top supplier without needing to repeat &quot;wheat imports to Israel&quot;]
+
+User: &quot;Has that changed from last year?&quot;
+Bot: [Compares current to previous year automatically]
+</code></pre></div></p>
+<h3 id="4-data-visualization">4. Data Visualization<a class="headerlink" href="#4-data-visualization" title="Permanent link">&para;</a></h3>
+<p>The chatbot can generate charts and visualizations:</p>
+<ul>
+<li><strong>Time-series charts</strong> - Trend analysis over time</li>
+<li><strong>Comparison charts</strong> - Side-by-side comparisons</li>
+<li><strong>Geographic maps</strong> - Regional visualizations</li>
+<li><strong>Distribution charts</strong> - Breakdown by category</li>
+</ul>
+<h3 id="5-export-and-sharing">5. Export and Sharing<a class="headerlink" href="#5-export-and-sharing" title="Permanent link">&para;</a></h3>
+<p>Responses can be:</p>
+<ul>
+<li>📄 <strong>Exported to PDF</strong> - For reports and documentation</li>
+<li>📊 <strong>Downloaded as Excel</strong> - For further analysis</li>
+<li>🔗 <strong>Shared via link</strong> - With colleagues</li>
+<li>📧 <strong>Emailed</strong> - Directly from the interface</li>
+</ul>
+<hr />
+<h2 id="how-to-use-the-chatbot">How to Use the Chatbot<a class="headerlink" href="#how-to-use-the-chatbot" title="Permanent link">&para;</a></h2>
+<h3 id="accessing-the-chatbot">Accessing the Chatbot<a class="headerlink" href="#accessing-the-chatbot" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>From any dashboard</strong> - Click the chatbot icon (💬) in the bottom-right corner</li>
+<li><strong>From the main menu</strong> - Select "AI Assistant" from the navigation menu</li>
+<li><strong>Keyboard shortcut</strong> - Press <code>Ctrl + K</code> (Windows) or <code>Cmd + K</code> (Mac)</li>
+</ol>
+<h3 id="asking-effective-questions">Asking Effective Questions<a class="headerlink" href="#asking-effective-questions" title="Permanent link">&para;</a></h3>
+<h4 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h4>
+<p><strong>Be Specific:</strong>
+- ❌ "Tell me about wheat"
+- ✅ "What was the week-over-week price change for wheat futures?"</p>
+<p><strong>Include Time Periods:</strong>
+- ❌ "How much corn was imported?"
+- ✅ "How much corn was imported to Israel in October 2024?"</p>
+<p><strong>Specify Commodities:</strong>
+- ❌ "Show import trends"
+- ✅ "Show wheat and corn import trends to Israel for the past 6 months"</p>
+<p><strong>Ask for Comparisons:</strong>
+- ✅ "Compare crude oil prices between Q3 and Q4 2024"
+- ✅ "Which had a bigger price increase, wheat or corn?"</p>
+<p><strong>Request Analysis:</strong>
+- ✅ "What factors drove the increase in container freight costs?"
+- ✅ "Why did Brazilian soybean exports to Israel decrease?"</p>
+<h4 id="question-types">Question Types<a class="headerlink" href="#question-types" title="Permanent link">&para;</a></h4>
+<p><strong>1. Factual Queries</strong>
+- "What is the current Baltic Dry Index?"
+- "How many countries export wheat to Israel?"
+- "What was Israel's total grain import last month?"</p>
+<p><strong>2. Trend Analysis</strong>
+- "Show me commodity price trends for the past year"
+- "Are transport costs increasing or decreasing?"
+- "What is the 3-month trend for sugar prices?"</p>
+<p><strong>3. Comparative Analysis</strong>
+- "Compare Israeli imports from Ukraine vs. Russia"
+- "Which commodity had the highest price volatility?"
+- "How do current wheat prices compare to 5-year averages?"</p>
+<p><strong>4. Anomaly Detection</strong>
+- "Are there any unusual patterns in rice imports?"
+- "Which commodities have red KPI scores?"
+- "Show me commodities with sudden price spikes"</p>
+<p><strong>5. Causal Analysis</strong>
+- "Why did diesel prices increase last month?"
+- "What caused the drop in Ukrainian wheat exports?"
+- "Explain the recent Baltic Dry Index decline"</p>
+<p><strong>6. Forecast Questions</strong>
+- "What is the forecast for corn prices next quarter?"
+- "Are crude oil imports expected to increase?"
+- "What does Trading Economics predict for container freight?"</p>
+<hr />
+<h2 id="advanced-features">Advanced Features<a class="headerlink" href="#advanced-features" title="Permanent link">&para;</a></h2>
+<h3 id="1-multi-step-analysis">1. Multi-Step Analysis<a class="headerlink" href="#1-multi-step-analysis" title="Permanent link">&para;</a></h3>
+<p>The chatbot can perform complex, multi-step analysis:</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code>User: &quot;Analyze the impact of reduced Russian wheat exports on 
+Israeli wheat prices and identify alternative suppliers&quot;
+
+Bot: 
+1. Shows Russian wheat export decline data
+2. Displays Israeli wheat price correlation
+3. Lists alternative wheat exporters by volume
+4. Provides recommendations for diversification
+</code></pre></div></p>
+<h3 id="2-threshold-alerts">2. Threshold Alerts<a class="headerlink" href="#2-threshold-alerts" title="Permanent link">&para;</a></h3>
+<p>Set up custom alerts through conversation:</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code>User: &quot;Alert me when wheat prices increase by more than 10%&quot;
+Bot: &quot;Alert created. You&#39;ll be notified when wheat futures prices 
+increase by more than 10% week-over-week.&quot;
+</code></pre></div></p>
+<h3 id="3-report-generation">3. Report Generation<a class="headerlink" href="#3-report-generation" title="Permanent link">&para;</a></h3>
+<p>Request customized reports:</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code>User: &quot;Create a monthly summary of all KPI changes and significant 
+news events for wheat, corn, and soybeans&quot;
+
+Bot: [Generates comprehensive report with charts, tables, and narrative]
+</code></pre></div></p>
+<h3 id="4-data-exploration">4. Data Exploration<a class="headerlink" href="#4-data-exploration" title="Permanent link">&para;</a></h3>
+<p>Browse data interactively:</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code>User: &quot;Show me the top 10 suppliers for each grain commodity&quot;
+Bot: [Displays ranked table]
+
+User: &quot;Filter to only those with &gt;5% market share&quot;
+Bot: [Updates table with filter]
+
+User: &quot;Sort by price competitiveness&quot;
+Bot: [Re-sorts data]
+</code></pre></div></p>
+<hr />
+<h2 id="understanding-chatbot-responses">Understanding Chatbot Responses<a class="headerlink" href="#understanding-chatbot-responses" title="Permanent link">&para;</a></h2>
+<h3 id="response-components">Response Components<a class="headerlink" href="#response-components" title="Permanent link">&para;</a></h3>
+<p><strong>1. Direct Answer</strong>
+- Clear, concise answer to your question
+- Numerical data when applicable
+- Source attribution</p>
+<p><strong>2. Context and Explanation</strong>
+- Why the data matters
+- Relevant background information
+- Related insights</p>
+<p><strong>3. Visualizations</strong> (when appropriate)
+- Charts and graphs
+- Maps and heat maps
+- Tables and matrices</p>
+<p><strong>4. Sources and Citations</strong>
+- Data source references
+- Update timestamps
+- Data quality indicators</p>
+<p><strong>5. Suggested Follow-Ups</strong>
+- Related questions you might want to ask
+- Deeper analysis options
+- Connected data points</p>
+<h3 id="confidence-indicators">Confidence Indicators<a class="headerlink" href="#confidence-indicators" title="Permanent link">&para;</a></h3>
+<p>The chatbot indicates confidence levels:</p>
+<ul>
+<li><strong>🟢 High Confidence</strong> - Answer based on clear, recent data</li>
+<li><strong>🟡 Medium Confidence</strong> - Answer requires assumptions or has data gaps</li>
+<li><strong>🔴 Low Confidence</strong> - Limited data available, answer is speculative</li>
+</ul>
+<h3 id="data-quality-warnings">Data Quality Warnings<a class="headerlink" href="#data-quality-warnings" title="Permanent link">&para;</a></h3>
+<p>The chatbot will alert you to:</p>
+<ul>
+<li>⚠️ <strong>Data Lag</strong> - "This data is from 2 months ago due to reporting delays"</li>
+<li>⚠️ <strong>Missing Data</strong> - "Data not available for 3 countries in this period"</li>
+<li>⚠️ <strong>Revised Data</strong> - "These figures were revised from previous estimates"</li>
+</ul>
+<hr />
+<h2 id="tips-and-tricks">Tips and Tricks<a class="headerlink" href="#tips-and-tricks" title="Permanent link">&para;</a></h2>
+<h3 id="getting-better-answers">Getting Better Answers<a class="headerlink" href="#getting-better-answers" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Start Broad, Then Narrow</strong></li>
+<li>First ask: "Show me wheat import trends"</li>
+<li>Then ask: "Focus on the past 3 months"</li>
+<li>
+<p>Finally: "Why did imports drop in October?"</p>
+</li>
+<li>
+<p><strong>Use Follow-Up Questions</strong></p>
+</li>
+<li>Build on previous answers</li>
+<li>The chatbot remembers conversation context</li>
+<li>
+<p>Reference previous responses ("that country", "those commodities")</p>
+</li>
+<li>
+<p><strong>Request Specific Formats</strong></p>
+</li>
+<li>"Show as a table"</li>
+<li>"Display as a line chart"</li>
+<li>
+<p>"Give me just the numbers"</p>
+</li>
+<li>
+<p><strong>Combine Multiple Questions</strong></p>
+</li>
+<li>"Compare X to Y and explain the difference"</li>
+<li>
+<p>"Show trends and identify anomalies"</p>
+</li>
+<li>
+<p><strong>Ask for Explanations</strong></p>
+</li>
+<li>"Why did this happen?"</li>
+<li>"What does this mean?"</li>
+<li>"Explain the implications"</li>
+</ol>
+<h3 id="conversation-management">Conversation Management<a class="headerlink" href="#conversation-management" title="Permanent link">&para;</a></h3>
+<p><strong>Starting Over:</strong>
+- Say "start new conversation" to clear context
+- Use "forget previous questions" to reset</p>
+<p><strong>Clarifying:</strong>
+- If the answer isn't what you expected, say "that's not what I meant"
+- Rephrase your question with more detail
+- Ask "can you clarify?"</p>
+<p><strong>Refining:</strong>
+- "Show more details"
+- "Summarize that"
+- "Break down by country/commodity/time period"</p>
+<hr />
+<h2 id="limitations-and-considerations">Limitations and Considerations<a class="headerlink" href="#limitations-and-considerations" title="Permanent link">&para;</a></h2>
+<h3 id="what-the-chatbot-can-do">What the Chatbot Can Do<a class="headerlink" href="#what-the-chatbot-can-do" title="Permanent link">&para;</a></h3>
+<p>✅ Answer questions based on SCAR system data
+✅ Analyze trends and patterns
+✅ Generate visualizations
+✅ Explain data and provide context
+✅ Compare data across dimensions
+✅ Identify anomalies
+✅ Create custom reports</p>
+<h3 id="what-the-chatbot-cannot-do">What the Chatbot Cannot Do<a class="headerlink" href="#what-the-chatbot-cannot-do" title="Permanent link">&para;</a></h3>
+<p>❌ Access data outside the SCAR system
+❌ Make procurement decisions (provides data for decisions)
+❌ Predict unforeseen events (earthquakes, wars, etc.)
+❌ Override system data or create new data
+❌ Execute trades or make commitments
+❌ Access classified or restricted information</p>
+<h3 id="data-limitations">Data Limitations<a class="headerlink" href="#data-limitations" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Historical Scope</strong> - Limited to data available in SCAR (varies by source)</li>
+<li><strong>Update Frequency</strong> - Answers reflect most recent data, but some sources have lag</li>
+<li><strong>Data Quality</strong> - Chatbot flags quality issues but cannot fix source data problems</li>
+<li><strong>Coverage Gaps</strong> - Some countries/commodities have limited data</li>
+</ul>
+<h3 id="ai-limitations">AI Limitations<a class="headerlink" href="#ai-limitations" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Interpretation</strong> - AI may misinterpret complex or ambiguous questions</li>
+<li><strong>Context</strong> - May not fully understand nuanced geopolitical or economic factors</li>
+<li><strong>Bias</strong> - Training data and algorithms may have inherent biases</li>
+<li><strong>Hallucination</strong> - In rare cases, may provide confident but incorrect answers</li>
+</ul>
+<p><strong>Best Practice:</strong> Always verify critical information using the dashboard screens and official data sources before making significant decisions.</p>
+<hr />
+<h2 id="frequently-asked-questions">Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permanent link">&para;</a></h2>
+<h3 id="q-can-the-chatbot-answer-questions-in-hebrew">Q: Can the chatbot answer questions in Hebrew?<a class="headerlink" href="#q-can-the-chatbot-answer-questions-in-hebrew" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Yes, the chatbot supports both English and Hebrew queries and responses.</p>
+<h3 id="q-how-current-is-the-chatbots-data">Q: How current is the chatbot's data?<a class="headerlink" href="#q-how-current-is-the-chatbots-data" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> The chatbot accesses the same data as the dashboard screens, updated according to each data source's schedule (daily for prices/news, monthly for trade statistics).</p>
+<h3 id="q-can-i-save-my-conversations">Q: Can I save my conversations?<a class="headerlink" href="#q-can-i-save-my-conversations" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Yes, conversations can be saved, exported, and shared with colleagues.</p>
+<h3 id="q-is-my-conversation-private">Q: Is my conversation private?<a class="headerlink" href="#q-is-my-conversation-private" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Conversations are logged for system improvement but are only accessible to authorized users. Do not share sensitive information beyond what's already in the SCAR system.</p>
+<h3 id="q-what-if-the-chatbot-gives-an-incorrect-answer">Q: What if the chatbot gives an incorrect answer?<a class="headerlink" href="#q-what-if-the-chatbot-gives-an-incorrect-answer" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Use the "Report Issue" button to flag incorrect responses. This helps improve the system. Always verify critical information using dashboard data.</p>
+<h3 id="q-can-the-chatbot-create-custom-dashboards">Q: Can the chatbot create custom dashboards?<a class="headerlink" href="#q-can-the-chatbot-create-custom-dashboards" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Not yet, but this feature is planned for future releases.</p>
+<h3 id="q-how-do-i-provide-feedback-on-the-chatbot">Q: How do I provide feedback on the chatbot?<a class="headerlink" href="#q-how-do-i-provide-feedback-on-the-chatbot" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Use the thumbs up/down buttons after each response, or click "Provide Detailed Feedback" to submit suggestions.</p>
+<hr />
+<h2 id="support-and-training">Support and Training<a class="headerlink" href="#support-and-training" title="Permanent link">&para;</a></h2>
+<h3 id="getting-help">Getting Help<a class="headerlink" href="#getting-help" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>In-app Help</strong> - Click the "?" icon in the chatbot interface</li>
+<li><strong>Tutorials</strong> - Access video tutorials from the Help menu</li>
+<li><strong>IT Support</strong> - Contact your system administrator for technical issues</li>
+<li><strong>User Community</strong> - Share tips and best practices with other users</li>
+</ul>
+<h3 id="training-resources">Training Resources<a class="headerlink" href="#training-resources" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Getting Started Guide</strong> - Basic chatbot usage (15 minutes)</li>
+<li><strong>Advanced Features</strong> - Complex queries and analysis (45 minutes)</li>
+<li><strong>Best Practices Workshop</strong> - Effective question asking (2 hours)</li>
+<li><strong>Monthly Webinars</strong> - New features and tips</li>
+</ul>
+<p>Contact your training coordinator to schedule sessions.</p>
+<hr />
+<h2 id="future-enhancements">Future Enhancements<a class="headerlink" href="#future-enhancements" title="Permanent link">&para;</a></h2>
+<p>Planned chatbot improvements:</p>
+<ul>
+<li><strong>Voice Input</strong> - Ask questions using voice commands</li>
+<li><strong>Predictive Suggestions</strong> - Chatbot suggests relevant questions based on current data</li>
+<li><strong>Automated Briefings</strong> - Daily/weekly summary reports generated automatically</li>
+<li><strong>Integration with External Tools</strong> - Export directly to PowerPoint, Tableau, etc.</li>
+<li><strong>Multi-User Collaboration</strong> - Shared conversation spaces for team analysis</li>
+<li><strong>Custom AI Agents</strong> - Specialized chatbots for specific commodities or regions</li>
+</ul>
+<hr />
+<p><em>The AI Chatbot is a powerful tool, but it's designed to augment, not replace, human expertise and judgment. Always apply critical thinking to AI-generated insights.</em></p>
+<hr />
+<p><em>Last Updated: December 2025</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../dashboards/israel_imports.en/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Israel Imports">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Israel Imports
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../glossary/glossary.en/" class="md-footer__link md-footer__link--next" aria-label="Next: Glossary">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Glossary
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://www.gov.il" target="_blank" rel="noopener" title="Government of Israel" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M96 0C60.7 0 32 28.7 32 64v384c0 35.3 28.7 64 64 64h201.2c-12.5-14.7-23.2-30.8-31.8-48h-89.5v-80c0-17.7 14.3-32 32-32h32v-26.7c0-18.1 6.1-35.2 16.6-48.8q-.6-2.1-.6-4.5v-32c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v1l86.7-28.9c3.1-1 6.2-1.8 9.3-2.5L416 64c0-35.3-28.7-64-64-64zm32 112c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16zm144-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16v-32c0-8.8 7.2-16 16-16M128 240c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16zm317.3 248.5-13.3 6.3V306.7l96 32v19.6c0 55.8-32.2 106.5-82.7 130.3zm-23.4-229-112 37.3c-13.1 4.4-21.9 16.6-21.9 30.4v31.1c0 74.4 43 142.1 110.2 173.7l18.5 8.7c4.8 2.2 10 3.4 15.2 3.4s10.5-1.2 15.2-3.4l18.5-8.7C533 500.3 576 432.6 576 358.2v-31.1c0-13.8-8.8-26-21.9-30.4l-112-37.3c-6.6-2.2-13.7-2.2-20.2 0z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

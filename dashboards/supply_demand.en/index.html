@@ -1,0 +1,2926 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Supply Chain Anomaly Detection and Risk Assessment System for Israel">
+      
+      
+        <meta name="author" content="National Emergency Authority & Ministry of Innovation, Science and Technology">
+      
+      
+        <link rel="canonical" href="https://horizon-scanning.github.io/scar-documentation/dashboards/supply_demand.en/">
+      
+      
+        <link rel="prev" href="../transport_prices.en/">
+      
+      
+        <link rel="next" href="../worldwide_exports.en/">
+      
+      
+        
+          <link rel="alternate" href="/index.en/" hreflang="en">
+        
+          <link rel="alternate" href="/index.he/" hreflang="he">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Supply & Demand - SCAR - Supply Chain Anomaly Recognition System</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#supply-demand-dashboard" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="SCAR - Supply Chain Anomaly Recognition System" class="md-header__button md-logo" aria-label="SCAR - Supply Chain Anomaly Recognition System" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SCAR - Supply Chain Anomaly Recognition System
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Supply & Demand
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/index.en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/index.he/" hreflang="he" class="md-select__link">
+              עברית
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../index.en/" class="md-tabs__link">
+          
+  
+  
+  English
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../index.he/" class="md-tabs__link">
+          
+  
+  
+  עברית
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SCAR - Supply Chain Anomaly Recognition System" class="md-nav__button md-logo" aria-label="SCAR - Supply Chain Anomaly Recognition System" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    SCAR - Supply Chain Anomaly Recognition System
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    English
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    English
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Overview
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    System Overview
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/system_overview.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About SCAR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboards
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dashboards
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kpis.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KPIs Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../news.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    News Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commodity_prices.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commodity Prices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transport_prices.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transport Prices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Supply & Demand
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Supply & Demand
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dashboard-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboard Components
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dashboard Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#production-by-country-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Production by Country Map
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commodity-total-supply-by-date-heat-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commodity Total Supply by Date Heat Map
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outlook-changes-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outlook Changes Table
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supply-changes-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supply Changes Table
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demand-changes-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Demand Changes Table
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Sources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Sources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#us-department-of-agriculture-usda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US Department of Agriculture (USDA)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#joint-organisations-data-initiative-jodi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Joint Organisations Data Initiative (JODI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-schedule-and-data-lag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Update Schedule and Data Lag
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Update Schedule and Data Lag">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update-frequency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Update Frequency
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-lag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Lag
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-supply-demand-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the Supply &amp; Demand Dashboard
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the Supply &amp; Demand Dashboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analysis-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analysis Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alert-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alert Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-with-other-dashboards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration with Other Dashboards
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integration with Other Dashboards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cross-reference-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cross-Reference Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-concepts-and-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Concepts and Definitions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Concepts and Definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supply-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supply Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demand-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Demand Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stock-to-use-ratio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stock-to-Use Ratio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supply-demand-balance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supply-Demand Balance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary-of-supply-demand-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Glossary of Supply &amp; Demand Terms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations-and-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations and Considerations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Limitations and Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Quality
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#market-vs-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Market vs. Statistics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpretation-caution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpretation Caution
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-dashboards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Dashboards
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../worldwide_exports.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Worldwide Exports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../israel_imports.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Israel Imports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Chatbot
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI Chatbot
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chatbot/rag_user_guide.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/glossary.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    עברית
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    עברית
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    דף הבית
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    סקירת המערכת
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    סקירת המערכת
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/system_overview.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    אודות SCAR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    דשבורדים
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    דשבורדים
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kpis.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    מדדי KPI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../news.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ניתוח חדשות
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commodity_prices.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    מחירי סחורות
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transport_prices.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    מחירי הובלה
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../supply_demand.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    היצע וביקוש
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../worldwide_exports.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ייצוא עולמי
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../israel_imports.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    יבוא לישראל
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    צ'אטבוט AI
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    צ'אטבוט AI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chatbot/rag_user_guide.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    מדריך למשתמש
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    עיון
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    עיון
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/glossary.he/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    מונחון
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dashboard-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboard Components
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dashboard Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#production-by-country-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Production by Country Map
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commodity-total-supply-by-date-heat-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commodity Total Supply by Date Heat Map
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outlook-changes-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outlook Changes Table
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supply-changes-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supply Changes Table
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demand-changes-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Demand Changes Table
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Sources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Sources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#us-department-of-agriculture-usda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US Department of Agriculture (USDA)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#joint-organisations-data-initiative-jodi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Joint Organisations Data Initiative (JODI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-schedule-and-data-lag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Update Schedule and Data Lag
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Update Schedule and Data Lag">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update-frequency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Update Frequency
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-lag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Lag
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-supply-demand-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the Supply &amp; Demand Dashboard
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the Supply &amp; Demand Dashboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analysis-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analysis Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alert-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alert Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-with-other-dashboards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration with Other Dashboards
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integration with Other Dashboards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cross-reference-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cross-Reference Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-concepts-and-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Concepts and Definitions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Concepts and Definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supply-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supply Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demand-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Demand Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stock-to-use-ratio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stock-to-Use Ratio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supply-demand-balance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supply-Demand Balance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary-of-supply-demand-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Glossary of Supply &amp; Demand Terms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations-and-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations and Considerations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Limitations and Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Quality
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#market-vs-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Market vs. Statistics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpretation-caution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpretation Caution
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-dashboards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Dashboards
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="supply-demand-dashboard">Supply &amp; Demand Dashboard<a class="headerlink" href="#supply-demand-dashboard" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>The <strong>Supply &amp; Demand Dashboard</strong> provides a detailed overview and analysis of global commodity production and consumption, helping stakeholders balance resources, anticipate market fluctuations, and strategically plan inventory levels.</p>
+<div class="admonition info">
+<p class="admonition-title">Dashboard Purpose</p>
+<p>This dashboard tracks the fundamental balance between commodity supply (production + stocks + imports) and demand (consumption + exports) to identify potential shortages, surpluses, and market imbalances that drive price movements and availability risks.</p>
+</div>
+<hr />
+<h2 id="dashboard-components">Dashboard Components<a class="headerlink" href="#dashboard-components" title="Permanent link">&para;</a></h2>
+<h3 id="production-by-country-map">Production by Country Map<a class="headerlink" href="#production-by-country-map" title="Permanent link">&para;</a></h3>
+<p><strong>Visualization Type:</strong> Interactive choropleth (color-shaded) world map</p>
+<p><strong>Description:</strong> Visualizes global commodity production volumes by country in 1000 Metric Tons (MT). Darker shades indicate higher production, enabling users to quickly identify leading commodity producers and geographical production trends.</p>
+<p><strong>Color Scale:</strong>
+- <strong>Light colors</strong> - Low production volumes
+- <strong>Medium colors</strong> - Moderate production
+- <strong>Dark colors</strong> - High production volumes
+- <strong>No data</strong> - Countries without reported production for selected commodity</p>
+<p><strong>Interactive Features:</strong>
+- <strong>Hover tooltips</strong> - View exact production volumes
+- <strong>Click for details</strong> - Access country-specific production data
+- <strong>Commodity selector</strong> - Switch between different commodities
+- <strong>Time slider</strong> - View historical production patterns</p>
+<div class="admonition warning">
+<p class="admonition-title">EU Data Note</p>
+<p><strong>Important:</strong> Production volumes for EU member states are not displayed individually on this map because they are reported in aggregate by USDA. For detailed information on EU production, refer to the Supply pane and tables below.</p>
+</div>
+<p><strong>How to Use:</strong>
+1. <strong>Identify key producers</strong> - Quickly spot major production countries
+2. <strong>Geographic diversification</strong> - Assess concentration risks
+3. <strong>Regional patterns</strong> - Identify production clusters
+4. <strong>Year-over-year comparison</strong> - Track shifting production geography</p>
+<hr />
+<h3 id="commodity-total-supply-by-date-heat-map">Commodity Total Supply by Date Heat Map<a class="headerlink" href="#commodity-total-supply-by-date-heat-map" title="Permanent link">&para;</a></h3>
+<p><strong>Visualization Type:</strong> Time-series heat map</p>
+<p><strong>Description:</strong> A heat map representing the monthly amount of commodity total supply over time. Users can select a country to observe patterns, trends, and seasonal variations, gaining insights into periods of surplus or deficit in supply of each commodity.</p>
+<p><strong>Metric Calculation:</strong>
+<div class="highlight"><pre><span></span><code>Total Supply = Production + Beginning Stocks + Imports
+(Measured in 1000 MT)
+</code></pre></div></p>
+<p><strong>Color Coding:</strong>
+- <strong>Blue/cool colors</strong> - Lower supply levels
+- <strong>Yellow/warm colors</strong> - Medium supply levels
+- <strong>Red/hot colors</strong> - Higher supply levels
+- <strong>White/missing</strong> - No data available</p>
+<p><strong>Features:</strong>
+- <strong>Country filter</strong> - View supply patterns for specific countries
+- <strong>Time range selector</strong> - Focus on specific periods
+- <strong>Seasonal pattern identification</strong> - Spot harvest cycles and trends
+- <strong>Year-over-year comparison</strong> - Compare same months across years</p>
+<p><strong>Interpretation:</strong>
+- <strong>Consistent color patterns</strong> - Stable supply
+- <strong>Darkening over time</strong> - Supply accumulation
+- <strong>Lightening over time</strong> - Supply depletion
+- <strong>Irregular patterns</strong> - Market volatility or data quality issues</p>
+<hr />
+<h3 id="outlook-changes-table">Outlook Changes Table<a class="headerlink" href="#outlook-changes-table" title="Permanent link">&para;</a></h3>
+<p><strong>Description:</strong> Captures significant changes and events impacting commodity markets, providing qualitative context for quantitative data.</p>
+<p><strong>Columns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Date</strong></td>
+<td>Timeframe or month when the change was reported</td>
+</tr>
+<tr>
+<td><strong>Commodity</strong></td>
+<td>Commodity category affected (e.g., Wheat, Corn, Crude Oil)</td>
+</tr>
+<tr>
+<td><strong>Country</strong></td>
+<td>Country or region impacted by the change</td>
+</tr>
+<tr>
+<td><strong>Change Type</strong></td>
+<td>Nature of the event (Production, Import, Export, Consumption, Stock)</td>
+</tr>
+<tr>
+<td><strong>Outlook</strong></td>
+<td>Expert narrative describing the cause and implications of the change</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Change Types:</strong>
+- <strong>Production</strong> - Changes in output volumes
+- <strong>Import</strong> - Changes in import volumes or policies
+- <strong>Export</strong> - Changes in export volumes or restrictions
+- <strong>Consumption</strong> - Changes in domestic demand
+- <strong>Stock</strong> - Changes in inventory levels</p>
+<p><strong>Example Outlook Entries:</strong>
+- "Drought conditions reduced wheat production by 15% compared to previous estimate"
+- "New export restrictions implemented due to domestic food security concerns"
+- "Increased industrial demand drove higher consumption of crude oil"</p>
+<p><strong>How to Use:</strong>
+1. <strong>Filter by commodity</strong> - Focus on strategic commodities
+2. <strong>Review recent outlooks</strong> - Understand current market drivers
+3. <strong>Track recurring issues</strong> - Identify persistent problems (e.g., weather patterns)
+4. <strong>Connect to data</strong> - Link qualitative outlooks to quantitative changes
+5. <strong>Briefing material</strong> - Extract key narratives for stakeholder reports</p>
+<hr />
+<h3 id="supply-changes-table">Supply Changes Table<a class="headerlink" href="#supply-changes-table" title="Permanent link">&para;</a></h3>
+<p><strong>Description:</strong> Detailed table of commodity supply changes by country and sub-commodity, providing granular visibility into market dynamics.</p>
+<p><strong>Columns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Commodity</strong></td>
+<td>Commodity name and sub-category</td>
+</tr>
+<tr>
+<td><strong>Country</strong></td>
+<td>Producing country or region</td>
+</tr>
+<tr>
+<td><strong>Current Supply</strong></td>
+<td>Latest reported supply volume (1000 MT)</td>
+</tr>
+<tr>
+<td><strong>Volume Change</strong></td>
+<td>Absolute change from previous period (1000 MT)</td>
+</tr>
+<tr>
+<td><strong>Percentage Change</strong></td>
+<td>Percentage change from previous period (%)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Visual Indicators:</strong>
+- <strong>Red gradient</strong> - Significant supply drop (gradient: -300 to -1500 thousand MT)
+- <strong>Neutral</strong> - Minor changes or increases
+- <strong>Suppressed values</strong> - Changes &gt; 10,000% not shown (data quality issue)</p>
+<p><strong>Metric Notes:</strong>
+- <strong>Agricultural commodities</strong> - Measured in 1000 MT (metric tons)
+- <strong>Energy commodities</strong> - Measured in TBPD (thousand barrels per day)</p>
+<p><strong>Sorting and Filtering:</strong>
+- Sort by percentage change to identify largest drops/increases
+- Filter by country to assess specific supplier risks
+- Group by commodity to compare sub-categories</p>
+<p><strong>Interpretation:</strong>
+- <strong>Large negative changes</strong> - Potential supply disruptions requiring investigation
+- <strong>Widespread negative changes</strong> - Systemic issues (weather, disease, policy)
+- <strong>Isolated negative changes</strong> - Country-specific problems
+- <strong>Positive changes</strong> - Supply recovery or production expansion</p>
+<hr />
+<h3 id="demand-changes-table">Demand Changes Table<a class="headerlink" href="#demand-changes-table" title="Permanent link">&para;</a></h3>
+<p><strong>Description:</strong> Provides an analysis of commodity demand changes by country and sub-commodity, detailing consumption patterns and trends.</p>
+<p><strong>Columns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Commodity</strong></td>
+<td>Commodity name and sub-category</td>
+</tr>
+<tr>
+<td><strong>Country</strong></td>
+<td>Consuming country or region</td>
+</tr>
+<tr>
+<td><strong>Current Demand</strong></td>
+<td>Latest reported consumption volume (1000 MT)</td>
+</tr>
+<tr>
+<td><strong>Volume Change</strong></td>
+<td>Absolute change from previous period (1000 MT)</td>
+</tr>
+<tr>
+<td><strong>Percentage Change</strong></td>
+<td>Percentage change from previous period (%)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Visual Indicators:</strong>
+- <strong>Red gradient</strong> - Significant demand growth (gradient: 100 to 1000 thousand MT)
+- <strong>Neutral</strong> - Minor changes or decreases
+- <strong>Suppressed values</strong> - Changes &gt; 10,000% not shown (data quality issue)</p>
+<p><strong>Use Cases:</strong>
+1. <strong>Demand surge identification</strong> - Spot rapidly growing markets
+2. <strong>Consumption trends</strong> - Track long-term demand patterns
+3. <strong>Market balancing</strong> - Compare supply vs. demand changes
+4. <strong>Export opportunities</strong> - Identify growing consumption markets</p>
+<p><strong>Interpretation:</strong>
+- <strong>Large positive changes</strong> - Growing demand requiring additional supply
+- <strong>Negative changes</strong> - Demand reduction (economic slowdown, substitution)
+- <strong>Mismatches</strong> - When supply and demand move in opposite directions, expect price volatility</p>
+<hr />
+<h2 id="data-sources">Data Sources<a class="headerlink" href="#data-sources" title="Permanent link">&para;</a></h2>
+<h3 id="us-department-of-agriculture-usda">US Department of Agriculture (USDA)<a class="headerlink" href="#us-department-of-agriculture-usda" title="Permanent link">&para;</a></h3>
+<p><strong>Coverage:</strong>
+- Global production estimates
+- Consumption data
+- Stock levels
+- Import/export flows
+- Agricultural commodities: grains, oilseeds, sugar</p>
+<p><strong>Update Frequency:</strong> Monthly (typically mid-month)</p>
+<p><strong>Reports:</strong>
+- World Agricultural Supply and Demand Estimates (WASDE)
+- Production, Supply and Distribution (PSD) database</p>
+<h3 id="joint-organisations-data-initiative-jodi">Joint Organisations Data Initiative (JODI)<a class="headerlink" href="#joint-organisations-data-initiative-jodi" title="Permanent link">&para;</a></h3>
+<p><strong>Coverage:</strong>
+- Energy production and consumption
+- Crude oil and refined products
+- Natural gas
+- Global energy statistics</p>
+<p><strong>Update Frequency:</strong> Monthly (2-month lag typical)</p>
+<p><strong>Geographic Coverage:</strong> 100+ countries representing ~90% of global oil market</p>
+<hr />
+<h2 id="update-schedule-and-data-lag">Update Schedule and Data Lag<a class="headerlink" href="#update-schedule-and-data-lag" title="Permanent link">&para;</a></h2>
+<h3 id="update-frequency">Update Frequency<a class="headerlink" href="#update-frequency" title="Permanent link">&para;</a></h3>
+<p><strong>Monthly</strong> - Data updates when USDA and JODI publish new reports</p>
+<p><strong>Special Note:</strong>
+- <strong>Sugar data</strong> - Updated every 6 months (November and May)
+- <strong>Final estimates</strong> - May be revised in subsequent months as better data becomes available</p>
+<h3 id="data-lag">Data Lag<a class="headerlink" href="#data-lag" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Most recent data</strong> - Typically 1-2 months behind current date</li>
+<li><strong>Preliminary estimates</strong> - Subject to revision</li>
+<li><strong>Historical revisions</strong> - Past data may be updated retroactively</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Data Timeliness</p>
+<p>Supply and demand data has inherent reporting delays. This dashboard provides the most current official estimates, but real-time market conditions may differ. Cross-reference with price movements and news for complete picture.</p>
+</div>
+<hr />
+<h2 id="using-the-supply-demand-dashboard">Using the Supply &amp; Demand Dashboard<a class="headerlink" href="#using-the-supply-demand-dashboard" title="Permanent link">&para;</a></h2>
+<h3 id="analysis-workflow">Analysis Workflow<a class="headerlink" href="#analysis-workflow" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>1. Market Overview:
+   - Review Production Map for geographic concentration
+   - Check Supply Heat Map for current supply status
+   - Scan Outlook Changes for recent events
+
+2. Risk Assessment:
+   - Identify commodities with declining supply (Supply Changes)
+   - Check if demand is increasing simultaneously (Demand Changes)
+   - Calculate supply-demand balance:
+     Tight Market = Supply ↓ + Demand ↑
+     Loose Market = Supply ↑ + Demand ↓
+
+3. Country-Specific Analysis:
+   - Filter tables by key supplier countries
+   - Assess diversification of supply sources
+   - Identify single-country dependencies
+
+4. Seasonal Pattern Recognition:
+   - Use Heat Map to identify harvest seasons
+   - Plan procurement around production cycles
+   - Anticipate seasonal price movements
+
+5. Forecasting and Planning:
+   - Project future supply based on current trends
+   - Adjust inventory targets based on supply outlook
+   - Diversify sources if supply concentration is high
+</code></pre></div>
+<h3 id="alert-configuration">Alert Configuration<a class="headerlink" href="#alert-configuration" title="Permanent link">&para;</a></h3>
+<p>Configure alerts for:
+- ⚠️ Supply decreases exceeding 10% month-over-month
+- ⚠️ Demand increases exceeding 15% in major consuming countries
+- ⚠️ Combined supply decrease + demand increase in same commodity
+- ⚠️ Major producer (&gt;20% global share) shows supply disruption
+- ⚠️ New outlook changes for strategic commodities</p>
+<p>Contact your system administrator to set up custom supply/demand alerts.</p>
+<hr />
+<h2 id="integration-with-other-dashboards">Integration with Other Dashboards<a class="headerlink" href="#integration-with-other-dashboards" title="Permanent link">&para;</a></h2>
+<h3 id="cross-reference-matrix">Cross-Reference Matrix<a class="headerlink" href="#cross-reference-matrix" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Supply/Demand Signal</th>
+<th>Check Dashboard</th>
+<th>Look For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Supply decrease</td>
+<td>Commodity Prices</td>
+<td>Price increase confirmation</td>
+</tr>
+<tr>
+<td>Supply decrease</td>
+<td>News</td>
+<td>Production disruption stories</td>
+</tr>
+<tr>
+<td>Demand increase</td>
+<td>Worldwide Exports</td>
+<td>Export flow increases</td>
+</tr>
+<tr>
+<td>Supply surplus</td>
+<td>Commodity Prices</td>
+<td>Price decrease</td>
+</tr>
+<tr>
+<td>Geographic concentration</td>
+<td>Worldwide Exports</td>
+<td>Trade flow verification</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Workflow:</strong> Use supply/demand fundamentals to explain and predict price movements observed in other dashboards.</p>
+<hr />
+<h2 id="key-concepts-and-definitions">Key Concepts and Definitions<a class="headerlink" href="#key-concepts-and-definitions" title="Permanent link">&para;</a></h2>
+<h3 id="supply-components">Supply Components<a class="headerlink" href="#supply-components" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Production</strong> - New output in current period</li>
+<li><strong>Beginning Stocks</strong> - Inventory carried over from previous period</li>
+<li><strong>Imports</strong> - Commodities brought into country/region</li>
+</ul>
+<h3 id="demand-components">Demand Components<a class="headerlink" href="#demand-components" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Consumption</strong> - Domestic use (food, feed, industrial)</li>
+<li><strong>Exports</strong> - Commodities sent out of country/region</li>
+<li><strong>Ending Stocks</strong> - Inventory remaining at period end</li>
+</ul>
+<h3 id="stock-to-use-ratio">Stock-to-Use Ratio<a class="headerlink" href="#stock-to-use-ratio" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>Stock-to-Use Ratio = (Ending Stocks / Total Use) × 100
+</code></pre></div>
+<strong>Interpretation:</strong>
+- <strong>&lt; 15%</strong> - Very tight market, high price risk
+- <strong>15-25%</strong> - Normal range for most commodities
+- <strong>&gt; 25%</strong> - Comfortable supply cushion</p>
+<h3 id="supply-demand-balance">Supply-Demand Balance<a class="headerlink" href="#supply-demand-balance" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>Balance = Total Supply - Total Demand
+</code></pre></div>
+- <strong>Positive balance</strong> - Surplus (stocks accumulating)
+- <strong>Negative balance</strong> - Deficit (stocks depleting)
+- <strong>Zero balance</strong> - Equilibrium (rare in practice)</p>
+<hr />
+<h2 id="glossary-of-supply-demand-terms">Glossary of Supply &amp; Demand Terms<a class="headerlink" href="#glossary-of-supply-demand-terms" title="Permanent link">&para;</a></h2>
+<p><strong>1000 MT</strong> - Thousand metric tons (1,000,000 kilograms)</p>
+<p><strong>TBPD</strong> - Thousand barrels per day (energy commodity measure)</p>
+<p><strong>Carryover Stocks</strong> - Inventory held from previous production cycle</p>
+<p><strong>Crush</strong> - Processing of oilseeds into meal and oil</p>
+<p><strong>Feed Use</strong> - Commodity consumption as animal feed</p>
+<p><strong>Food Use</strong> - Commodity consumption for human consumption</p>
+<p><strong>Industrial Use</strong> - Non-food consumption (e.g., ethanol production from corn)</p>
+<p><strong>Production Year</strong> - Varies by commodity (e.g., Oct-Sep for wheat, Jan-Dec for oil)</p>
+<hr />
+<h2 id="limitations-and-considerations">Limitations and Considerations<a class="headerlink" href="#limitations-and-considerations" title="Permanent link">&para;</a></h2>
+<h3 id="data-quality">Data Quality<a class="headerlink" href="#data-quality" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Estimates, not actuals</strong> - Based on surveys, models, and reported data</li>
+<li><strong>Revisions</strong> - Data frequently revised as better information becomes available</li>
+<li><strong>Country-level accuracy</strong> - Varies by reporting infrastructure</li>
+<li><strong>Private stocks</strong> - Difficult to measure accurately (especially in some countries)</li>
+</ul>
+<h3 id="market-vs-statistics">Market vs. Statistics<a class="headerlink" href="#market-vs-statistics" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Lag</strong> - Market prices react before data is published</li>
+<li><strong>Unreported factors</strong> - Quality variations, logistics issues not captured</li>
+<li><strong>Speculation</strong> - Financial markets may not align with physical fundamentals</li>
+</ul>
+<h3 id="interpretation-caution">Interpretation Caution<a class="headerlink" href="#interpretation-caution" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Context matters</strong> - 10% supply drop of small producer vs. large producer</li>
+<li><strong>Baseline effects</strong> - Percentage changes can be misleading with very low baselines</li>
+<li><strong>Quality factors</strong> - Not all production is equal (e.g., protein content of wheat)</li>
+</ul>
+<hr />
+<h2 id="related-dashboards">Related Dashboards<a class="headerlink" href="#related-dashboards" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../kpis.en/">KPIs Dashboard</a> - Supply &amp; Demand Score calculation</li>
+<li><a href="../commodity_prices.en/">Commodity Prices Dashboard</a> - Price reactions to supply/demand changes</li>
+<li><a href="../news.en/">News Dashboard</a> - Production and supply event news</li>
+<li><a href="../worldwide_exports.en/">Worldwide Exports Dashboard</a> - Trade flow verification</li>
+</ul>
+<hr />
+<p><em>Last Updated: December 2025</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../transport_prices.en/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Transport Prices">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Transport Prices
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../worldwide_exports.en/" class="md-footer__link md-footer__link--next" aria-label="Next: Worldwide Exports">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Worldwide Exports
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://www.gov.il" target="_blank" rel="noopener" title="Government of Israel" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M96 0C60.7 0 32 28.7 32 64v384c0 35.3 28.7 64 64 64h201.2c-12.5-14.7-23.2-30.8-31.8-48h-89.5v-80c0-17.7 14.3-32 32-32h32v-26.7c0-18.1 6.1-35.2 16.6-48.8q-.6-2.1-.6-4.5v-32c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v1l86.7-28.9c3.1-1 6.2-1.8 9.3-2.5L416 64c0-35.3-28.7-64-64-64zm32 112c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16zm144-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16v-32c0-8.8 7.2-16 16-16M128 240c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16zm317.3 248.5-13.3 6.3V306.7l96 32v19.6c0 55.8-32.2 106.5-82.7 130.3zm-23.4-229-112 37.3c-13.1 4.4-21.9 16.6-21.9 30.4v31.1c0 74.4 43 142.1 110.2 173.7l18.5 8.7c4.8 2.2 10 3.4 15.2 3.4s10.5-1.2 15.2-3.4l18.5-8.7C533 500.3 576 432.6 576 358.2v-31.1c0-13.8-8.8-26-21.9-30.4l-112-37.3c-6.6-2.2-13.7-2.2-20.2 0z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>
