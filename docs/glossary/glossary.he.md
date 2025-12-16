@@ -389,7 +389,7 @@
 | MT | Metric Ton | טון מטרי |
 | QoQ | Quarter-over-Quarter | רבעון-על-רבעון |
 | RAG | Retrieval-Augmented Generation | יצירה מתוגברת אחזור |
-| SCAR | Supply Chain Anomaly Recognition | זיהוי אנומליות בשרשרת אספקה |
+| SCAR | Supply Chain Anomaly Radar | זיהוי אנומליות בשרשרת אספקה |
 | TBPD | Thousand Barrels Per Day | אלף חביות ליום |
 | TEU | Twenty-foot Equivalent Unit | יחידת מכולה |
 | UN | United Nations | האו"ם |

@@ -1,6 +1,6 @@
 # SCAR Documentation
 
-Documentation site for **SCAR (Supply Chain Anomaly Recognition System)** - a comprehensive data-driven platform designed to identify, analyze, and alert on disruptions and changes in global supply chains for commodities critical to Israel.
+Documentation site for **SCAR (Supply Chain Anomaly Radar System)** - a comprehensive data-driven platform designed to identify, analyze, and alert on disruptions and changes in global supply chains for commodities critical to Israel.
 
 ## Overview
 

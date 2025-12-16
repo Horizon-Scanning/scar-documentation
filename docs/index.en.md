@@ -1,6 +1,6 @@
-# SCAR - Supply Chain Anomaly Recognition System
+# SCAR - Supply Chain Anomaly Radar System
 
-Welcome to the **SCAR (Supply Chain Anomaly Recognition)** system documentation. SCAR is a comprehensive data-driven platform designed to identify, analyze, and alert on disruptions and changes in global supply chains for commodities critical to Israel.
+Welcome to the **SCAR (Supply Chain Anomaly Radar)** system documentation. SCAR is a comprehensive data-driven platform designed to identify, analyze, and alert on disruptions and changes in global supply chains for commodities critical to Israel.
 
 ## Overview
 

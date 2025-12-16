@@ -1,6 +1,6 @@
 # Glossary
 
-This glossary provides definitions and explanations for key terms used throughout the SCAR (Supply Chain Anomaly Recognition) system documentation.
+This glossary provides definitions and explanations for key terms used throughout the SCAR (Supply Chain Anomaly Radar) system documentation.
 
 ---
 
@@ -288,7 +288,7 @@ News articles classified in shortage categories (excluding "neutral"), represent
 **Sanctions**
 Economic penalties imposed by countries or international bodies to influence behavior.
 
-**SCAR (Supply Chain Anomaly Recognition)**
+**SCAR (Supply Chain Anomaly Radar)**
 The Israeli supply chain monitoring and risk assessment system.
 
 **Sentiment Analysis**
@@ -411,7 +411,7 @@ Comparison of a value to the same value in the year-ago period.
 | PDF | Portable Document Format |
 | QoQ | Quarter-over-Quarter |
 | RAG | Retrieval-Augmented Generation |
-| SCAR | Supply Chain Anomaly Recognition |
+| SCAR | Supply Chain Anomaly Radar |
 | TBPD | Thousand Barrels Per Day |
 | TEU | Twenty-foot Equivalent Unit |
 | UN | United Nations |

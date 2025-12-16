@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The **SCAR (Supply Chain Anomaly Recognition) System** is a cutting-edge data-driven platform developed jointly by the **National Emergency Authority** and the **Ministry of Innovation, Science and Technology** (Horizon Line Department). The system is designed to provide comprehensive monitoring, analysis, and early warning capabilities for global supply chain disruptions affecting commodities critical to Israel's strategic needs.
+The **SCAR (Supply Chain Anomaly Radar) System** is a cutting-edge data-driven platform developed jointly by the **National Emergency Authority** and the **Ministry of Innovation, Science and Technology** (Horizon Line Department). The system is designed to provide comprehensive monitoring, analysis, and early warning capabilities for global supply chain disruptions affecting commodities critical to Israel's strategic needs.
 
 ## The Challenge
 
