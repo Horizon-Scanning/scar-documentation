@@ -1,0 +1,39 @@
+# MkDocs build output
+site/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.log
+
+# Office files (if not needed in repo)
+*.docx
+*.xlsx
+*.pptx
+
+# Documentation source files that shouldn't be committed (if any)
+# Keep docs/ directory but ignore any temp files
+docs/*.tmp
+docs/*.bak
+

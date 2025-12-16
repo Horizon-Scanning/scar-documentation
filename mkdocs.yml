@@ -1,0 +1,112 @@
+site_name: SCAR - Supply Chain Anomaly Recognition System
+site_description: Supply Chain Anomaly Detection and Risk Assessment System for Israel
+site_author: National Emergency Authority & Ministry of Innovation, Science and Technology
+site_url: https://horizon-scanning.github.io/scar-documentation/
+
+theme:
+  name: material
+  language: en
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.copy
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+plugins:
+  - search:
+      lang:
+        - en
+        - he
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+
+extra:
+  alternate:
+    - name: English
+      link: /index.en/
+      lang: en
+    - name: עברית
+      link: /index.he/
+      lang: he
+  javascript:
+    - js/language-switcher.js
+  social:
+    - icon: fontawesome/solid/building-shield
+      link: https://www.gov.il
+      name: Government of Israel
+
+nav:
+  - Home: index.md
+  - English:
+    - Home: index.en.md
+    - System Overview:
+      - About SCAR: overview/system_overview.en.md
+    - Dashboards:
+      - KPIs Dashboard: dashboards/kpis.en.md
+      - News Analysis: dashboards/news.en.md
+      - Commodity Prices: dashboards/commodity_prices.en.md
+      - Transport Prices: dashboards/transport_prices.en.md
+      - Supply & Demand: dashboards/supply_demand.en.md
+      - Worldwide Exports: dashboards/worldwide_exports.en.md
+      - Israel Imports: dashboards/israel_imports.en.md
+    - AI Chatbot:
+      - User Guide: chatbot/rag_user_guide.en.md
+    - Reference:
+      - Glossary: glossary/glossary.en.md
+  
+  - עברית:
+    - דף הבית: index.he.md
+    - סקירת המערכת:
+      - אודות SCAR: overview/system_overview.he.md
+    - דשבורדים:
+      - מדדי KPI: dashboards/kpis.he.md
+      - ניתוח חדשות: dashboards/news.he.md
+      - מחירי סחורות: dashboards/commodity_prices.he.md
+      - מחירי הובלה: dashboards/transport_prices.he.md
+      - היצע וביקוש: dashboards/supply_demand.he.md
+      - ייצוא עולמי: dashboards/worldwide_exports.he.md
+      - יבוא לישראל: dashboards/israel_imports.he.md
+    - צ'אטבוט AI:
+      - מדריך למשתמש: chatbot/rag_user_guide.he.md
+    - עיון:
+      - מונחון: glossary/glossary.he.md
+

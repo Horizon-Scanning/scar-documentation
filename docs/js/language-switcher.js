@@ -1,0 +1,197 @@
+// Language switcher for SCAR documentation
+// Handles switching between .en.html and .he.html pages
+// This script must run early to intercept Material theme's language switcher
+
+(function() {
+  'use strict';
+  
+  console.log('SCAR Language Switcher: Script loaded');
+  console.log('Current URL:', window.location.href);
+  console.log('Current pathname:', window.location.pathname);
+
+  // Get current page path
+  function getCurrentPath() {
+    return window.location.pathname;
+  }
+
+  // Convert path between English and Hebrew versions
+  // MkDocs Material uses directory-style URLs (with trailing slashes)
+  function switchLanguage(path, targetLang) {
+    if (!path) return targetLang === 'he' ? '/index.he/' : '/index.en/';
+    
+    // Normalize path - remove leading/trailing slashes for processing
+    let normalizedPath = path.replace(/^\/+|\/+$/g, '');
+    
+    // Handle root/index pages
+    if (normalizedPath === '' || normalizedPath === 'index' || normalizedPath === 'index.html') {
+      return targetLang === 'he' ? '/index.he/' : '/index.en/';
+    }
+    
+    // Handle directory-style URLs (with trailing slash or .html extension)
+    // Remove .html extension if present, then handle directory-style
+    normalizedPath = normalizedPath.replace(/\.html$/, '');
+    
+    // Handle language-specific pages (.en/ or .he/)
+    if (normalizedPath.endsWith('.en')) {
+      return targetLang === 'he' 
+        ? '/' + normalizedPath.replace('.en', '.he') + '/'
+        : '/' + normalizedPath.replace('.en', '') + '/';
+    }
+    
+    if (normalizedPath.endsWith('.he')) {
+      return targetLang === 'en'
+        ? '/' + normalizedPath.replace('.he', '.en') + '/'
+        : '/' + normalizedPath.replace('.he', '') + '/';
+    }
+    
+    // For other pages, add language suffix
+    return targetLang === 'he' 
+      ? '/' + normalizedPath + '.he/'
+      : '/' + normalizedPath + '.en/';
+  }
+
+  // Update all language switcher links
+  function updateLanguageSwitcher() {
+    const currentPath = getCurrentPath();
+    
+    // Find all potential language switcher links
+    const selectors = [
+      'a[lang="he"]',
+      'a[lang="en"]',
+      '[data-md-component="language"] a',
+      '.md-header__option a',
+      'a[href="/index.he.html"]',
+      'a[href="/index.he/"]',
+      'a[href="/index.en.html"]',
+      'a[href="/index.en/"]',
+      'a[href="/"]'
+    ];
+    
+    selectors.forEach(function(selector) {
+      try {
+        const links = document.querySelectorAll(selector);
+        links.forEach(function(link) {
+          const href = link.getAttribute('href');
+          const langAttr = link.getAttribute('lang');
+          const text = link.textContent.trim();
+          
+          // Determine target language
+          let targetLang = null;
+          if (langAttr === 'he' || text === 'עברית' || (href && (href.includes('index.he') || href === '/index.he/'))) {
+            targetLang = 'he';
+          } else if (langAttr === 'en' || text === 'English' || href === '/' || (href && href.includes('index.en'))) {
+            targetLang = 'en';
+          }
+          
+          if (targetLang) {
+            const newHref = switchLanguage(currentPath, targetLang);
+            if (newHref && newHref !== href) {
+              link.setAttribute('href', newHref);
+              console.log('Updated link:', href, '->', newHref);
+            }
+          }
+        });
+      } catch (e) {
+        console.warn('Error updating language switcher:', e);
+      }
+    });
+  }
+
+  // Debug: log current path
+  console.log('Language switcher loaded. Current path:', getCurrentPath());
+
+  // Intercept clicks on language switcher - use capture phase to catch early
+  document.addEventListener('click', function(e) {
+    let link = e.target;
+    
+    // Find the closest anchor tag
+    while (link && link.tagName !== 'A') {
+      link = link.parentElement;
+    }
+    
+    if (!link || !link.tagName || link.tagName !== 'A') return;
+    
+    const href = link.getAttribute('href');
+    const lang = link.getAttribute('lang');
+    const text = (link.textContent || '').trim();
+    const classes = link.className || '';
+    
+    // Check if this is a language switcher link - be very broad
+    const isLanguageLink = 
+      href === '/' || 
+      href === '/index.he/' ||
+      href === '/index.he.html' ||
+      href === 'index.he.html' ||
+      href === '/index.en/' ||
+      href === 'index.en.html' ||
+      href === '/index.en.html' ||
+      lang === 'he' || 
+      lang === 'en' ||
+      text === 'עברית' || 
+      text === 'English' ||
+      classes.includes('md-header__option') ||
+      link.closest('[data-md-component="language"]') ||
+      link.closest('.md-header__option') ||
+      (href && (href.includes('index.he') || href.includes('index.en')));
+    
+    if (isLanguageLink) {
+      const currentPath = getCurrentPath();
+      let targetLang = null;
+      
+      // Determine target language
+      if (lang === 'he' || text === 'עברית' || href === '/index.he/' || href === '/index.he.html' || href === 'index.he.html') {
+        targetLang = 'he';
+      } else if (lang === 'en' || text === 'English' || href === '/' || href === '/index.en/' || href === 'index.en.html') {
+        targetLang = 'en';
+      } else {
+        // Try to infer from current page
+        if (currentPath.includes('.he') || currentPath.includes('/index.he/')) {
+          targetLang = 'en';
+        } else {
+          targetLang = 'he';
+        }
+      }
+      
+      if (targetLang) {
+        const newHref = switchLanguage(currentPath, targetLang);
+        console.log('Language switch:', currentPath, '->', newHref, '(target:', targetLang + ')');
+        
+        if (newHref && newHref !== href) {
+          e.preventDefault();
+          e.stopPropagation();
+          e.stopImmediatePropagation();
+          window.location.href = newHref;
+          return false;
+        }
+      }
+    }
+  }, true); // Use capture phase
+
+  // Update links immediately and on DOM ready
+  updateLanguageSwitcher();
+  
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      updateLanguageSwitcher();
+      setTimeout(updateLanguageSwitcher, 100);
+      setTimeout(updateLanguageSwitcher, 300);
+      setTimeout(updateLanguageSwitcher, 500);
+    });
+  } else {
+    setTimeout(updateLanguageSwitcher, 100);
+    setTimeout(updateLanguageSwitcher, 300);
+    setTimeout(updateLanguageSwitcher, 500);
+  }
+  
+  // Use MutationObserver to catch dynamically added elements
+  if (typeof MutationObserver !== 'undefined') {
+    const observer = new MutationObserver(function(mutations) {
+      updateLanguageSwitcher();
+    });
+    observer.observe(document.body || document.documentElement, {
+      childList: true,
+      subtree: true
+    });
+  }
+})();
+
