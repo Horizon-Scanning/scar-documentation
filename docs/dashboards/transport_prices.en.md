@@ -356,11 +356,26 @@ Contact your system administrator to set up custom transport price alerts.
 
 ### Overview
 
-The **Transport Price Weights** file (`transport price weights.xlsx`) is a configuration file used by the KPIs Dashboard to calculate the Transport Price Score. This file defines the relative importance (weights) of each shipping index in the weighted average calculation.
+The **Transport Price Weights** file (`transport price weights.xlsx`) is a configuration file used by the KPIs Dashboard to calculate the Transport Price Score. This file defines the relative importance (weights) of each shipping index in the weighted average calculation for different commodities.
+
+The weights file specifies how each commodity's transport costs are distributed across four key transport indices:
+
+- **Baltic Dirty Tanker Index** - For crude oil and heavy petroleum products
+- **Baltic Clean Tanker Index** - For refined petroleum products and clean liquids
+- **Baltic Dry Index (BDI)** - For dry bulk commodities (grains, ores, coal, etc.)
+- **Containerized Freight Index (CFI)** - For containerized goods
+
+### Transport Index Weights by Commodity
+
+The following table shows the detailed weight distribution for each commodity across the four transport indices. These weights determine how changes in each transport index affect the overall Transport Price Score calculation for specific commodities.
+
+![Transport Index Weights by Commodity](images/transport_index_weights_by_commodity.png)
+
+*Figure: Transport Index Weights by Commodity - Shows the percentage weight of each transport index (Baltic Dirty Tanker, Baltic Clean Tanker, Baltic Dry Index, Containerized Freight) for commodities across Agriculture, Energy, Transportation, and Construction categories.*
 
 ### File Purpose
 
-The weights file ensures that the Transport Price Score accurately reflects the relevance of different shipping indices to Israeli strategic commodities. By assigning appropriate weights to Baltic Dry Index (BDI) and Containerized Freight Index (CFI), the system can produce a more accurate risk assessment.
+The weights file ensures that the Transport Price Score accurately reflects the relevance of different shipping indices to Israeli strategic commodities. By assigning appropriate weights to each transport index based on how commodities are actually shipped, the system can produce a more accurate risk assessment.
 
 ### File Location
 
@@ -368,27 +383,56 @@ The `transport price weights.xlsx` file is located in the project root directory
 
 ### File Structure
 
-The Excel file contains:
-- **Index Weights**: Weight assignments for BDI and CFI indices
-- **Commodity Mapping**: How different commodities relate to each index
+The Excel file contains detailed weight assignments showing the percentage contribution of each transport index for every commodity:
+
+- **Commodity-Level Weights**: Specific weight percentages for each commodity across all four transport indices
+- **Index Weights**: Weight assignments for Baltic Dirty Tanker, Baltic Clean Tanker, BDI, and CFI indices
+- **Commodity Categories**: Organized by Agriculture, Energy, Transportation, and Construction sectors
 - **Weight Configuration**: Settings that determine how index changes contribute to the final score
 - **Historical Adjustments**: Any changes to weights over time (if tracked)
 
+### Weight Breakdown by Commodity Category
+
+The detailed weights shown in the table above can be summarized by commodity category as follows:
+
+#### Agriculture Commodities
+Agricultural products are primarily transported via dry bulk (BDI) and containerized freight (CFI), with varying distributions:
+- **Grains** (Wheat, Corn, Barley, Oat): 70-80% BDI, 20-30% CFI
+- **Oilseeds** (Soybeans, Rapeseed): 60-70% BDI, 30-40% CFI
+- **Processed Products** (Canola, Sugar, Sunflower Oil): Higher CFI weights (60-80%)
+- **Rice**: Balanced 50% BDI, 50% CFI
+
+#### Energy Commodities
+Energy products are split between tanker indices based on product type:
+- **Crude Oil**: 80% Baltic Dirty Tanker, 20% Baltic Clean Tanker
+- **Brent**: 70% Baltic Dirty Tanker, 30% Baltic Clean Tanker
+- **Refined Products** (Gasoline, Diesel, Jet Fuel): 80-90% Baltic Clean Tanker, 10-20% Baltic Dirty Tanker
+- **LPG**: 60% Baltic Clean Tanker, 30% CFI, 10% Baltic Dirty Tanker
+
+#### Construction Materials
+Construction commodities primarily use dry bulk transport:
+- **Iron Ore**: 90% BDI, 10% CFI
+- **Cement**: 70% BDI, 30% CFI
+- **Concrete**: 100% BDI
+- **Steel**: 50% BDI, 50% CFI
+- **Bitumen**: 90% Baltic Dirty Tanker, 10% Baltic Clean Tanker
+
 ### How It Works
 
-1. **Index Monitoring**: The system continuously monitors week-over-week changes in BDI and CFI
-2. **Weight Application**: Each index change is multiplied by its corresponding weight from the weights file
-3. **Score Calculation**: The weighted changes are summed: `Weighted Momentum % = Σ(Index WoW Change % × Weight)`
+1. **Index Monitoring**: The system continuously monitors week-over-week changes in all four transport indices (Baltic Dirty Tanker, Baltic Clean Tanker, BDI, and CFI)
+2. **Commodity-Specific Weight Application**: For each commodity, index changes are multiplied by the commodity's specific weights from the weights file
+3. **Score Calculation**: The weighted changes are summed: `Weighted Momentum % = Σ(Index WoW Change % × Commodity-Specific Weight)`
 4. **Risk Assessment**: The resulting score is compared against risk thresholds to determine the color-coded indicator on the KPIs Dashboard
 
 ### Weight Configuration Logic
 
-Weights are typically assigned based on:
+Weights are assigned based on:
 
 - **Transport Method Relevance**: 
   - Commodities primarily shipped via bulk carriers (e.g., coal, grain, iron ore) → Higher BDI weight
-  - Commodities primarily shipped via containers (e.g., manufactured goods, refined products) → Higher CFI weight
-  - Commodities using both methods → Balanced weights
+  - Commodities shipped via tankers (crude oil, refined products) → Baltic Tanker indices
+  - Commodities primarily shipped via containers (e.g., manufactured goods, processed products) → Higher CFI weight
+  - Commodities using multiple methods → Distributed weights across relevant indices
 
 - **Israeli Import Patterns**: 
   - Analysis of historical import data to determine which indices better reflect Israeli supply chain costs
