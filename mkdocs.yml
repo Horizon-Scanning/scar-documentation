@@ -62,10 +62,10 @@ markdown_extensions:
 extra:
   alternate:
     - name: English
-      link: /index.en/
+      link: /scar-documentation/index.en/
       lang: en
     - name: עברית
-      link: /index.he/
+      link: /scar-documentation/index.he/
       lang: he
   javascript:
     - js/language-switcher.js
