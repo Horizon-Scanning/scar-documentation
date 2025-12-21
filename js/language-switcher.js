@@ -14,17 +14,42 @@
     return window.location.pathname;
   }
 
+  // Get base path from site URL
+  function getBasePath() {
+    const siteUrl = 'https://horizon-scanning.github.io/scar-documentation/';
+    try {
+      const url = new URL(siteUrl);
+      return url.pathname.replace(/\/$/, '') || '';
+    } catch (e) {
+      // Fallback: try to detect from current location
+      const path = window.location.pathname;
+      if (path.startsWith('/scar-documentation/')) {
+        return '/scar-documentation';
+      }
+      return '';
+    }
+  }
+
   // Convert path between English and Hebrew versions
   // MkDocs Material uses directory-style URLs (with trailing slashes)
   function switchLanguage(path, targetLang) {
-    if (!path) return targetLang === 'he' ? '/index.he/' : '/index.en/';
+    const basePath = getBasePath();
+    const basePrefix = basePath ? basePath + '/' : '/';
+    
+    if (!path) return basePrefix + (targetLang === 'he' ? 'index.he/' : 'index.en/');
+    
+    // Remove base path if present
+    let normalizedPath = path;
+    if (basePath && normalizedPath.startsWith(basePath)) {
+      normalizedPath = normalizedPath.substring(basePath.length);
+    }
     
     // Normalize path - remove leading/trailing slashes for processing
-    let normalizedPath = path.replace(/^\/+|\/+$/g, '');
+    normalizedPath = normalizedPath.replace(/^\/+|\/+$/g, '');
     
     // Handle root/index pages
     if (normalizedPath === '' || normalizedPath === 'index' || normalizedPath === 'index.html') {
-      return targetLang === 'he' ? '/index.he/' : '/index.en/';
+      return basePrefix + (targetLang === 'he' ? 'index.he/' : 'index.en/');
     }
     
     // Handle directory-style URLs (with trailing slash or .html extension)
@@ -33,21 +58,21 @@
     
     // Handle language-specific pages (.en/ or .he/)
     if (normalizedPath.endsWith('.en')) {
-      return targetLang === 'he' 
-        ? '/' + normalizedPath.replace('.en', '.he') + '/'
-        : '/' + normalizedPath.replace('.en', '') + '/';
+      const newPath = targetLang === 'he' 
+        ? normalizedPath.replace('.en', '.he')
+        : normalizedPath.replace('.en', '');
+      return basePrefix + newPath + '/';
     }
     
     if (normalizedPath.endsWith('.he')) {
-      return targetLang === 'en'
-        ? '/' + normalizedPath.replace('.he', '.en') + '/'
-        : '/' + normalizedPath.replace('.he', '') + '/';
+      const newPath = targetLang === 'en'
+        ? normalizedPath.replace('.he', '.en')
+        : normalizedPath.replace('.he', '');
+      return basePrefix + newPath + '/';
     }
     
     // For other pages, add language suffix
-    return targetLang === 'he' 
-      ? '/' + normalizedPath + '.he/'
-      : '/' + normalizedPath + '.en/';
+    return basePrefix + normalizedPath + (targetLang === 'he' ? '.he/' : '.en/');
   }
 
   // Update all language switcher links
@@ -77,9 +102,11 @@
           
           // Determine target language
           let targetLang = null;
-          if (langAttr === 'he' || text === 'עברית' || (href && (href.includes('index.he') || href === '/index.he/'))) {
+          const basePath = getBasePath();
+          const basePrefix = basePath ? basePath + '/' : '/';
+          if (langAttr === 'he' || text === 'עברית' || (href && (href.includes('index.he') || href === basePrefix + 'index.he/' || href === '/index.he/'))) {
             targetLang = 'he';
-          } else if (langAttr === 'en' || text === 'English' || href === '/' || (href && href.includes('index.en'))) {
+          } else if (langAttr === 'en' || text === 'English' || href === '/' || href === basePrefix || (href && href.includes('index.en'))) {
             targetLang = 'en';
           }
           
@@ -117,13 +144,20 @@
     const classes = link.className || '';
     
     // Check if this is a language switcher link - be very broad
+    const basePath = getBasePath();
+    const basePrefix = basePath ? basePath + '/' : '/';
     const isLanguageLink = 
       href === '/' || 
+      href === basePrefix ||
+      href === basePrefix + 'index.he/' ||
       href === '/index.he/' ||
+      href === basePrefix + 'index.he.html' ||
       href === '/index.he.html' ||
       href === 'index.he.html' ||
+      href === basePrefix + 'index.en/' ||
       href === '/index.en/' ||
       href === 'index.en.html' ||
+      href === basePrefix + 'index.en.html' ||
       href === '/index.en.html' ||
       lang === 'he' || 
       lang === 'en' ||
@@ -139,13 +173,13 @@
       let targetLang = null;
       
       // Determine target language
-      if (lang === 'he' || text === 'עברית' || href === '/index.he/' || href === '/index.he.html' || href === 'index.he.html') {
+      if (lang === 'he' || text === 'עברית' || href === basePrefix + 'index.he/' || href === '/index.he/' || href === basePrefix + 'index.he.html' || href === '/index.he.html' || href === 'index.he.html') {
         targetLang = 'he';
-      } else if (lang === 'en' || text === 'English' || href === '/' || href === '/index.en/' || href === 'index.en.html') {
+      } else if (lang === 'en' || text === 'English' || href === '/' || href === basePrefix || href === basePrefix + 'index.en/' || href === '/index.en/' || href === 'index.en.html') {
         targetLang = 'en';
       } else {
         // Try to infer from current page
-        if (currentPath.includes('.he') || currentPath.includes('/index.he/')) {
+        if (currentPath.includes('.he') || currentPath.includes('/index.he/') || currentPath.includes('index.he')) {
           targetLang = 'en';
         } else {
           targetLang = 'he';
