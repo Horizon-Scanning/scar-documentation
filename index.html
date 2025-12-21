@@ -31,7 +31,7 @@
     
     
       
-        <title>SCAR - Supply Chain Anomaly Recognition System</title>
+        <title>SCAR - Supply Chain Anomaly Radar System</title>
       
     
     
@@ -96,7 +96,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="SCAR - Supply Chain Anomaly Recognition System" class="md-header__button md-logo" aria-label="SCAR - Supply Chain Anomaly Recognition System" data-md-component="logo">
+    <a href="." title="SCAR - Supply Chain Anomaly Radar System" class="md-header__button md-logo" aria-label="SCAR - Supply Chain Anomaly Radar System" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -110,7 +110,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            SCAR - Supply Chain Anomaly Recognition System
+            SCAR - Supply Chain Anomaly Radar System
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -320,13 +320,13 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="SCAR - Supply Chain Anomaly Recognition System" class="md-nav__button md-logo" aria-label="SCAR - Supply Chain Anomaly Recognition System" data-md-component="logo">
+    <a href="." title="SCAR - Supply Chain Anomaly Radar System" class="md-nav__button md-logo" aria-label="SCAR - Supply Chain Anomaly Radar System" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    SCAR - Supply Chain Anomaly Recognition System
+    SCAR - Supply Chain Anomaly Radar System
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -1639,13 +1639,31 @@
 
 <script>
   // Redirect to English version by default
-  if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
-    window.location.href = '/index.en/';
-  }
+  (function() {
+    var pathname = window.location.pathname;
+
+    // Detect base path dynamically
+    var pathParts = pathname.split('/').filter(function(p) { return p; });
+    var basePath = '';
+
+    // If pathname starts with /scar-documentation, use that as base
+    if (pathname.indexOf('/scar-documentation') === 0) {
+      basePath = '/scar-documentation';
+    }
+
+    // Normalize pathname
+    pathname = pathname.replace(/\/$/, '');
+    var normalizedPath = pathname.replace(basePath, '') || '/';
+
+    // Check if we're at root or index page
+    if (normalizedPath === '/' || normalizedPath === '/index' || normalizedPath === '/index.html' || normalizedPath.endsWith('/index.html')) {
+      window.location.href = basePath + '/index.en/';
+    }
+  })();
 </script>
 
-<p><meta http-equiv="refresh" content="0; url=/index.en/">
-<link rel="canonical" href="/index.en/" /></p>
+<p><meta http-equiv="refresh" content="0; url=index.en/">
+<link rel="canonical" href="index.en/" /></p>
 <h1 id="redirecting">Redirecting...<a class="headerlink" href="#redirecting" title="Permanent link">&para;</a></h1>
 <p>If you are not redirected automatically, <a href="index.en/">click here</a>.</p>
 
