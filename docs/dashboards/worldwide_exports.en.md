@@ -174,6 +174,9 @@ Lists countries with the largest month-over-month **decreases** in export volume
 3. **Risk assessment** - Evaluate exposure to declining suppliers
 4. **Trend confirmation** - Verify shifts seen in other visualizations
 
+!!! note "Data Availability Note"
+    **NOTE:** Data Availability did not taken into account, so net weight decreases could have resulted because of under reporting.
+
 ---
 
 ### UN Comtrade Data Availability by Country
@@ -185,12 +188,13 @@ Lists countries with the largest month-over-month **decreases** in export volume
 **Columns:**
 - **Country** - Trading nation
 - **Recent Months (8)** - Data availability indicators (✓/✗) for each month
-- **Year over Year** - Ratio comparing current month's data to same month last year
-- **Total Records Last Year** - Total number of reported trade records for the same month last year
+- **Year over Year** - Ratio comparing current month's data to same month last year. A green cell means there are no deficiencies compared to last year.
+- **Total Records** - Total number of reported trade records for the current month
 
 **Data Quality Indicators:**
 - ✓ **Green check** - Data reported for this month
 - ✗ **Red cross** - Data missing for this month
+- **Green cell (YoY)** - No deficiencies compared to last year
 - **YoY Ratio < 1.0** - Less data reported than previous year
 - **YoY Ratio > 1.0** - More data reported than previous year
 

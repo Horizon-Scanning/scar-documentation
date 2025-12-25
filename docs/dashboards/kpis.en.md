@@ -141,10 +141,10 @@ Weights are typically configured based on:
 
 | Threshold | Range | Interpretation |
 |-----------|-------|----------------|
-| 🟢 Green | > 0% | Transport costs stable or increasing (normal market) |
-| 🟡 Yellow | -8% to 0% | Moderate decrease in transport costs |
-| 🔴 Red | -20% to -8% | Significant decrease indicating market disruption |
-| 🟥 Red Node | < -20% | Extreme decrease suggesting major logistics disruption |
+| 🟢 Green | > 0 | Transport costs stable or increasing (normal market) |
+| 🟡 Yellow | -8 < Yellow ≤ 0 | Moderate decrease in transport costs |
+| 🔴 Red | < -8 | Significant decrease indicating market disruption |
+| 🟥 Red Node | < -20 | Extreme decrease suggesting major logistics disruption |
 
 !!! note "Inverted Logic"
     **Note:** This KPI uses inverted logic - **decreasing** transport prices can indicate market disruptions, reduced trade volumes, or economic slowdown, which are risk factors.
@@ -180,10 +180,10 @@ Total Supply Change % = ((Last Month Total Supply /
 
 | Threshold | Range | Interpretation |
 |-----------|-------|----------------|
-| 🟢 Green | > 0% | Supply increasing or stable |
-| 🟡 Yellow | -5% to 0% | Moderate supply decrease |
-| 🔴 Red | -80% to -5% | Significant supply reduction |
-| 🟥 Red Node | < -80% | Critical supply shortage |
+| 🟢 Green | > 0 | Supply increasing or stable |
+| 🟡 Yellow | -5 < Yellow ≤ 0 | Moderate supply decrease |
+| 🔴 Red | ≤ -5 | Significant supply reduction |
+| 🟥 Red Node | < -80 | Critical supply shortage |
 
 ### Update Frequency
 **Monthly** - Updated when new USDA and JODI reports are published
@@ -218,10 +218,10 @@ Average Data Availability Trend %
 
 | Threshold | Range | Interpretation |
 |-----------|-------|----------------|
-| 🟢 Green | > 0% | Exports stable or increasing |
-| 🟡 Yellow | -10% to 0% | Moderate export decline |
-| 🔴 Red | -40% to -10% | Significant export reduction |
-| 🟥 Red Node | ≤ -40% | Critical export collapse |
+| 🟢 Green | > 0 | Exports stable or increasing |
+| 🟡 Yellow | -10 ≤ Yellow < 0 | Moderate export decline |
+| 🔴 Red | ≤ -10 | Significant export reduction |
+| 🟥 Red Node | ≤ -40 | Critical export collapse |
 
 ### Update Frequency
 **Monthly** - Updated when new UN Comtrade data is released (typically 2-3 month lag)
@@ -237,27 +237,27 @@ Average Data Availability Trend %
 ## 6. Israel Imports Score
 
 ### Description
-Measures month-over-month import performance changes by commodity, comparing last month imports to the previous month. Provides insight into Israel's specific import trends for critical commodities.
+Measures import performance changes by commodity, comparing current month imports to the rolling 12-month average. Provides seasonal-adjusted insight into Israel's import trends for critical commodities.
 
 ### Calculation Formula
 ```
-MoM Import Change % = ((Last Month Imports - Previous Month Imports) / 
-                        Previous Month Imports) × 100
+Import Score % = ((Current Month - Avg of Previous 12 Months) / 
+                  Avg of Previous 12 Months) × 100
 ```
 
 **Components:**
-- **Last Month Imports**: Total net weight imported in most recent month
-- **Previous Month Imports**: Total net weight imported in prior month
-- **Percentage Change**: Month-over-month growth or decline
+- **Current Month**: Total net weight imported in most recent month
+- **Avg of Previous 12 Months**: Rolling average of imports over the past 12 months
+- **Percentage Change**: Deviation from 12-month average (seasonal-adjusted)
 
 ### Risk Thresholds
 
 | Threshold | Range | Interpretation |
 |-----------|-------|----------------|
-| 🟢 Green | > 0% | Imports stable or increasing |
-| 🟡 Yellow | -20% to 0% | Moderate import decline |
-| 🔴 Red | -80% to -20% | Significant import reduction |
-| 🟥 Red Node | ≤ -80% | Critical import shortage |
+| 🟢 Green | > 0 | Imports stable or increasing |
+| 🟡 Yellow | -20 ≤ Yellow ≤ 0 | Moderate import decline |
+| 🔴 Red | ≤ -20 | Significant import reduction |
+| 🟥 Red Node | ≤ -80 | Critical import shortage |
 
 ### Update Frequency
 **Monthly** - Updated when Israel Customs DataGov publishes new data
